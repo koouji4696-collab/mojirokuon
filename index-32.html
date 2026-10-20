@@ -1,0 +1,2355 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net wss://generativelanguage.googleapis.com; img-src 'self' data: blob:; media-src blob:; worker-src blob:; object-src 'none'; base-uri 'none'">
+<title>書記局 録音処｜明星学苑教職員組合</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#E6E9EE;--paper:#FFFFFF;--ink:#1B2440;--ink2:#4B5671;--ink3:#7C869B;--rule:#DFE4EB;--rule2:#B9C4D4;
+  --shu:#C23A1E;--shu-bg:#FBEDE8;--ok:#2F7A57;--focus:#2F64D6;
+  --pink:#F7D9DF;--pink-e:#C9677E;--yellow:#F6ECAE;--yellow-e:#B8961F;--blue:#D7E8F5;--blue-e:#4F86B8;
+  --green:#DDEFD2;--green-e:#5A9442;--lilac:#E7E2F4;--lilac-e:#8273B3;--teal:#D2EEEA;--teal-e:#2F8F86;
+  --ui:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+  --mincho:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font:15px/1.75 var(--ui);font-variant-numeric:tabular-nums}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+[hidden]{display:none!important}
+a{color:var(--focus)}
+.muted{color:var(--ink2)}.small{font-size:13px}.nowrap{white-space:nowrap}
+.err{color:var(--shu)}
+.btn{appearance:none;border:1px solid var(--ink);background:var(--paper);border-radius:6px;padding:.45em 1.1em;font-weight:700;cursor:pointer;min-height:40px;line-height:1.4}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.ghost{border-color:var(--rule2);font-weight:400;background:transparent}
+.btn.sm{min-height:32px;padding:.2em .8em;font-size:13px}
+.btn.stop{border-color:var(--shu);color:var(--shu)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.wide{width:100%}
+input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;border:1px solid var(--rule2);border-radius:5px;background:#fff;padding:.45em .6em;min-height:40px}
+textarea{resize:vertical;line-height:1.6}
+label{cursor:pointer}
+.lbl{display:block;font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:4px}
+
+/* ---- 入口 ---- */
+.gate{min-height:100vh;display:grid;place-items:start center;padding:48px 16px}
+.card{position:relative;background:var(--paper);max-width:640px;width:100%;padding:40px 44px 32px;border:1px solid var(--rule);box-shadow:0 2px 0 var(--rule2)}
+.mast{font:800 34px/1.2 var(--mincho);letter-spacing:.06em;margin:0}
+.org{margin:6px 0 22px;color:var(--ink2);letter-spacing:.08em}
+.stamp{position:absolute;top:26px;right:28px;border:2px solid var(--shu);color:var(--shu);font:800 13px/1.25 var(--mincho);padding:6px 8px;transform:rotate(-5deg);text-align:center;border-radius:3px}
+.notice{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;margin-bottom:20px}
+.notice h2{font-size:15px;margin:0 0 6px}
+.notice ol{margin:0;padding-left:1.5em;font-size:14px;line-height:1.75}
+.notice li{margin:3px 0}
+.code-in{font-size:20px!important;letter-spacing:.12em;text-transform:uppercase}
+.agree{display:flex;gap:8px;align-items:center;margin:14px 0 16px;font-weight:700}
+.agree input{width:20px;height:20px}
+.fine{font-size:12.5px;color:var(--ink3);margin:14px 0 0}
+
+/* ---- 上部 ---- */
+.banner{background:#FFF4D6;border-bottom:1px solid #E8D48A;padding:8px 16px;font-size:13.5px}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;background:var(--paper);border-bottom:1px solid var(--rule2);padding:10px 22px;position:sticky;top:0;z-index:30}
+.brand{display:flex;align-items:baseline;gap:10px}
+.mast-s{font:800 21px/1 var(--mincho);letter-spacing:.06em}
+.org-s{font-size:12px;color:var(--ink3)}
+.tabs{display:flex;gap:2px;flex-wrap:wrap}
+.tab{border:0;background:none;padding:6px 12px;border-radius:5px;cursor:pointer;color:var(--ink2)}
+.tab.on{background:var(--ink);color:#fff}
+.who{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:13px}
+main{max-width:1320px;margin:0 auto;padding:22px 20px 80px}
+.page>.sec-h:first-child{margin-top:4px}
+.sec-h{font:700 22px/1.4 var(--mincho);margin:0 0 12px}
+
+/* ---- 準備 ---- */
+.step{display:flex;align-items:center;gap:10px;font-size:17px;margin:26px 0 10px}
+.step span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:14px}
+.step small{font-weight:400;color:var(--ink3);font-size:13px}
+#setup>.step:first-child{margin-top:0}
+.modes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mode{position:relative;display:flex;flex-direction:column;gap:2px;background:var(--paper);border:1px solid var(--rule2);border-radius:6px;padding:12px 14px;min-height:84px}
+.mode input{position:absolute;opacity:0;pointer-events:none}
+.mode b{font-size:17px}
+.mode small{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.mode:has(input:checked){background:var(--ink);border-color:var(--ink);color:#fff}
+.mode:has(input:checked) small{color:#D5DAE6}
+.mode:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:2px}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 16px;background:var(--paper);border:1px solid var(--rule);padding:16px 18px}
+.f{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:var(--ink2)}
+.f input,.f textarea,.f select{font-weight:400;color:var(--ink)}
+.f.wide{grid-column:span 2}
+.f.full{grid-column:1/-1}
+.more{grid-column:1/-1;border-top:1px dashed var(--rule2);padding-top:10px}
+.more summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.more[open] summary{margin-bottom:10px}
+.more .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+.refs{display:flex;flex-direction:column;gap:4px;max-height:260px;overflow:auto;border:1px solid var(--rule);border-radius:5px;padding:8px 10px;font-weight:400;color:var(--ink)}
+.ref{display:flex;align-items:baseline;gap:8px}
+.ref small{color:var(--ink3);font-size:12px}
+.sources{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.source{display:flex;flex-direction:column;gap:4px;align-items:flex-start;text-align:left;background:var(--paper);border:1px solid var(--rule2);border-left:6px solid var(--ink);border-radius:6px;padding:16px 18px;cursor:pointer}
+.source b{font-size:18px}
+.source small{color:var(--ink2);font-size:13px}
+.source.live{border-left-color:var(--shu)}
+.source:disabled,.source.dis{opacity:.45;cursor:not-allowed}
+.hint{color:var(--ink3);font-size:13px;margin:10px 2px 0}
+#setup.meta-only .s1,#setup.meta-only .s4{display:none}
+
+/* ---- 記録用紙 ---- */
+.sheet-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:12px}
+.chip{width:auto!important;min-height:34px!important;border-radius:999px!important;background:var(--ink)!important;color:#fff;border:0!important;padding:0 14px!important;font-weight:700}
+.title-in{flex:1 1 320px;font:700 22px/1.3 var(--mincho)!important;border:0!important;border-bottom:1px solid var(--rule2)!important;border-radius:0!important;background:transparent!important;padding:4px 2px!important}
+.sh-meta{color:var(--ink3);font-size:13px}
+.sh-actions{display:flex;gap:6px;flex-wrap:wrap}
+.bar{background:var(--paper);border:1px solid var(--rule);padding:12px 16px;margin-bottom:12px;display:flex;flex-direction:column;gap:10px}
+.rec-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.rec{display:flex;align-items:center;gap:10px;border:0;background:none;cursor:pointer;padding:0;font-weight:700;font-size:16px}
+.rec-dot{width:54px;height:54px;border-radius:50%;border:2px solid var(--shu);color:var(--shu);display:grid;place-items:center;font:800 21px var(--mincho)}
+.rec.on .rec-dot{background:var(--shu);color:#fff;animation:pulse 1.6s ease-in-out infinite}
+.rec.on .rec-lbl{color:var(--shu)}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(194,58,30,.14)}}
+@media (prefers-reduced-motion:reduce){.rec.on .rec-dot{animation:none}}
+.rec-info{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rec-time{font-size:22px;font-weight:700;letter-spacing:.04em}
+.meter{display:inline-block;width:90px;height:8px;background:var(--rule);border-radius:4px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--ok);transition:width .2s}
+.eng{font-size:13px;color:var(--ink2);border:1px solid var(--rule2);border-radius:999px;padding:1px 10px}
+.eng[data-st=live]{color:var(--ok);border-color:var(--ok)}
+.eng[data-st=error]{color:var(--shu);border-color:var(--shu)}
+.spk-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.spk-row .lbl{margin:0}
+.spk-toggle{display:flex;gap:6px;flex-wrap:wrap}
+.sb{border:1px solid var(--rule2);border-left:5px solid var(--spk);background:#fff;border-radius:5px;padding:6px 14px;min-height:42px;cursor:pointer;font-weight:700}
+.sb kbd{font:12px var(--ui);color:var(--ink3);margin-right:6px}
+.sb.on{background:var(--ink);color:#fff;border-color:var(--ink);border-left-color:var(--spk)}
+.sb.on kbd{color:#C9CFDC}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:13.5px}
+.opt-row select{width:auto;min-height:34px;padding:2px 6px}
+.sync-code{font-weight:700;background:var(--ink);color:#fff;border-radius:4px;padding:2px 10px;letter-spacing:.12em}
+.progress{background:var(--paper);border:1px solid var(--rule);padding:10px 16px;margin-bottom:12px}
+.pbar{height:6px;background:var(--rule);border-radius:3px;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--ink);transition:width .3s}
+.progress p{margin:6px 0 0;font-size:13.5px;color:var(--ink2)}
+.sheet-body{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;align-items:start}
+.record{background:var(--paper);border:1px solid var(--rule);min-height:320px;max-height:66vh;overflow:auto;position:relative}
+.lines{list-style:none;margin:0;padding:0}
+.line{position:relative;display:grid;grid-template-columns:70px 120px minmax(0,1fr) 46px;grid-template-areas:"ts spk tx vf";gap:0 10px;padding:8px 14px;border-bottom:1px solid #EDF0F4}
+.line .ts{grid-area:ts;color:var(--ink3);font-size:12.5px;padding-top:2px}
+.line .spk{grid-area:spk;align-self:start;border:0;border-left:3px solid var(--spk);background:none;text-align:left;padding:0 0 0 8px;font-weight:700;font-size:13.5px;line-height:1.55;cursor:pointer;overflow-wrap:anywhere}
+.line .tx{grid-area:tx;white-space:pre-wrap;overflow-wrap:anywhere;cursor:text;border-radius:3px}
+.line .tx[contenteditable=true]{outline:2px solid var(--focus);background:#F4F8FF;padding:0 4px}
+.line .ed{display:inline-block;margin-left:6px;font-size:11px;color:var(--ink3);border:1px solid var(--rule2);border-radius:3px;padding:0 4px;vertical-align:1px}
+.line .vf{grid-area:vf;align-self:start;border:1px solid var(--rule2);background:#fff;border-radius:4px;font-size:11.5px;padding:1px 0;cursor:pointer;color:var(--ink2);opacity:0}
+.line:hover .vf,.line:focus-within .vf{opacity:1}
+.line.fl::after{content:"";position:absolute;right:0;top:6px;bottom:6px;width:5px;background:var(--flag)}
+.line.hl{background:#FFF8D9}
+.line.gap .tx{color:var(--shu)}
+.interim{margin:0;padding:8px 14px 8px 214px;color:var(--ink3);min-height:0}
+.interim:empty{display:none}
+.empty{color:var(--ink3);padding:22px 16px;margin:0}
+.latest{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:20;border:0;background:var(--ink);color:#fff;border-radius:999px;padding:8px 18px;cursor:pointer;box-shadow:0 4px 14px rgba(27,36,64,.25)}
+
+/* ---- 付箋（指摘メモ） ---- */
+.margin{background:#F3F4F1;border:1px solid var(--rule);max-height:66vh;overflow:auto;padding:12px}
+.m-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px}
+.m-head h3{font:700 17px var(--mincho);margin:0;flex:1 0 auto}
+.btn.check{background:var(--ink);color:#fff;width:100%}
+.auto{font-size:12.5px;display:flex;align-items:center;gap:6px;color:var(--ink2)}
+.auto select{width:auto;min-height:30px;padding:0 4px}
+.fusen{position:relative;background:var(--bg);border-top:7px solid var(--edge);padding:10px 12px 12px;margin:0 0 12px;box-shadow:0 1px 0 rgba(27,36,64,.07),3px 4px 0 rgba(27,36,64,.05);font-size:13.5px;line-height:1.65}
+.fusen.pink{--bg:var(--pink);--edge:var(--pink-e)}.fusen.yellow{--bg:var(--yellow);--edge:var(--yellow-e)}.fusen.blue{--bg:var(--blue);--edge:var(--blue-e)}.fusen.green{--bg:var(--green);--edge:var(--green-e)}.fusen.lilac{--bg:var(--lilac);--edge:var(--lilac-e)}.fusen.teal{--bg:var(--teal);--edge:var(--teal-e)}
+.fusen header{display:flex;align-items:center;gap:6px;font-size:12px}
+.fusen .tag{font-weight:700}
+.fusen .lv{border:1px solid currentColor;border-radius:3px;padding:0 4px}
+.fusen .lv-h{color:var(--shu);font-weight:700}
+.fusen .when{color:var(--ink2);margin-left:auto}
+.fusen .x{border:0;background:none;cursor:pointer;color:var(--ink2);padding:0 2px;font-size:12px}
+.fusen h4{margin:4px 0 2px;font-size:15px}
+.fusen p{margin:2px 0}
+.fusen .ev{margin:6px 0 0;padding-left:1.1em}
+.fusen .ev li{margin:2px 0}
+.fusen q{quotes:"「" "」"}
+.ref{border:0;background:none;padding:0;color:var(--focus);text-decoration:underline;cursor:pointer;font:inherit}
+span.ref{color:var(--ink);text-decoration:none;font-weight:700}
+.say{margin-top:8px;background:rgba(255,255,255,.6);border-radius:4px;padding:6px 8px;position:relative}
+.say>span{font-size:11.5px;color:var(--ink2);font-weight:700}
+.say .copy{position:absolute;top:4px;right:6px;border:1px solid var(--rule2);background:#fff;border-radius:3px;font-size:11.5px;cursor:pointer}
+.fusen.pin{outline:2px solid var(--ink)}
+.fab{display:none}
+.mclose{display:none}
+
+/* ---- 分析 ---- */
+.bar.finish{margin-top:14px}
+.fin-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.analysis{background:var(--paper);border:1px solid var(--rule);padding:22px 28px;margin-top:16px}
+.disclaimer{font-size:13px;color:var(--ink2);border-left:3px solid var(--rule2);padding-left:10px}
+.a-sec h3{font-size:16px;border-bottom:1px solid var(--rule);padding-bottom:4px;margin:24px 0 10px}
+.summary{white-space:pre-wrap;max-width:78ch}
+.loading{color:var(--ink3)}
+.loading::before{content:"";display:inline-block;width:10px;height:10px;border:2px solid var(--rule2);border-top-color:var(--ink);border-radius:50%;margin-right:8px;animation:spin 1s linear infinite;vertical-align:-1px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.issue{border-left:5px solid var(--a);background:#FAFBFC;padding:10px 14px;margin:10px 0}
+.issue.a-ok{--a:#9AA4B5}.issue.a-warn{--a:var(--yellow-e)}.issue.a-bad{--a:var(--shu)}.issue.a-chk{--a:var(--blue-e)}
+.issue header{display:flex;align-items:center;gap:10px}
+.issue h4{margin:0;font-size:15.5px}
+.badge{font-size:12px;font-weight:700;border-radius:3px;padding:1px 8px;color:#fff;background:var(--a);white-space:nowrap}
+.stmt{margin:6px 0}
+.stmt q{quotes:"「" "」";font-weight:700}
+.cites{list-style:none;margin:6px 0;padding:0}
+.cites li{border:1px solid var(--rule);border-left:3px solid var(--blue-e);background:#fff;padding:5px 10px;margin:4px 0;font-size:13.5px}
+.cites li.c-law{border-left-color:var(--ink3)}
+.cites b{margin-right:6px}
+.cites q{quotes:"「" "」";color:var(--ink2)}
+.reason{margin:6px 0 0;color:var(--ink2)}
+.tbl-wrap{overflow-x:auto}
+.tbl{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff}
+.tbl th,.tbl td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+.tbl th{background:#EEF2F7;font-weight:700;white-space:nowrap}
+.st{white-space:nowrap;font-weight:700}
+.qlist{padding-left:1.4em}
+.qlist li{margin:4px 0}
+.qlist button{margin-left:8px}
+#report{min-height:220px}
+.row{display:flex;gap:10px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.savebox{background:var(--paper);border:1px solid var(--rule);padding:22px 28px;margin-top:16px}
+.share{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.share label{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;border:1px solid var(--rule2);border-radius:6px;padding:10px 12px}
+.share small{flex-basis:100%;color:var(--ink2);font-size:12.5px}
+.share label:has(input:checked){border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.share-ai{font-size:13.5px;color:var(--ink2)}
+.exports,.save-actions{display:flex;gap:10px 16px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.exports .lbl{margin:0}
+
+/* ---- 一覧・ログ ---- */
+.join{display:flex;gap:10px;max-width:420px}
+.join input{font-size:22px!important;letter-spacing:.2em;text-transform:uppercase}
+.log-ctl{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.log-ctl select{width:auto}
+.log-sum{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.who-card{background:var(--paper);border:1px solid var(--rule);padding:8px 12px;font-size:13px;display:flex;flex-direction:column}
+.warnrow td{color:var(--shu)}
+.help p,.help li{max-width:78ch}
+
+
+/* ---- v1.1 追加 ---- */
+.ref-cat{display:flex;flex-direction:column;gap:2px;margin-bottom:6px}
+.ref-cat>b{font-size:12px;color:var(--ink3);letter-spacing:.04em}
+.meta.prep{grid-template-columns:1fr}
+.meta.prep .f.full{grid-column:auto}
+.filebtn{display:inline-flex;align-items:center;cursor:pointer;font-weight:400}
+.filebtn input{display:none}
+#ctx-drop{border-radius:6px;transition:background .15s}
+#ctx-drop.drag{background:#EEF4FF;outline:2px dashed var(--focus);outline-offset:4px}
+.ctx-files{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
+.ctxf{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;border:1px solid var(--rule);background:#fff;border-radius:5px;padding:5px 10px;font-weight:400;color:var(--ink)}
+.ctxf .grow{flex:1}
+.warn{color:var(--shu)}
+.prev{white-space:pre-wrap;max-height:50vh;overflow:auto;background:#F6F7F9;border:1px solid var(--rule);padding:10px;font:13px/1.6 var(--ui)}
+.fxb{margin-left:6px;border:1px solid var(--teal-e);background:var(--teal);color:#1B5E57;border-radius:3px;font-size:11px;padding:0 5px;cursor:pointer;vertical-align:1px}
+.vb{display:inline-block;font-size:11px;font-weight:700;border-radius:3px;padding:0 6px;line-height:1.7;white-space:nowrap;vertical-align:1px;border:1px solid currentColor;background:#fff}
+.vb-ok{color:#1F6B49}.vb-part{color:#8A6912}.vb-idx{color:#2C5A99}.vb-unk{color:#5B6577}.vb-ng{color:var(--shu)}
+.conf{font-size:11.5px;color:var(--ink2);border:1px dashed var(--ink3);border-radius:3px;padding:0 4px}
+.vline{margin:2px 0 4px}
+.vnote{background:#FFF4D6;border:1px solid #E8D48A;padding:4px 8px;font-size:13px;margin:6px 0}
+.vn{display:block;color:var(--ink3);font-size:12px}
+.policy-note{margin:6px 0 0;color:#1B5E57;background:var(--teal);padding:4px 8px;border-radius:3px;font-size:13px}
+.not-run{background:#F3F4F1;border:1px dashed var(--rule2);padding:8px 12px;font-size:13.5px;color:var(--ink2)}
+.dropped{font-size:12px;color:var(--ink2);border-top:1px dashed var(--rule2);padding-top:8px;margin:8px 0 0}
+.pick{border:1px solid var(--rule);border-radius:6px;padding:8px 12px 10px;margin:0;display:flex;flex-wrap:wrap;gap:6px 18px;background:#FBFBFC}
+.pick legend{font-size:13px;font-weight:700;color:var(--ink2);padding:0 6px}
+.pk{display:flex;align-items:flex-start;gap:8px;flex:1 1 240px;min-width:0}
+.pk input{margin-top:5px;width:18px;height:18px}
+.pk span{display:flex;flex-direction:column}
+.pk small{font-size:12.5px;color:var(--ink2);line-height:1.5}
+.sharebox{border:1px solid var(--rule2);border-left:6px solid var(--shu);background:#FFFDF8;border-radius:6px;padding:12px 14px}
+.share-main{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:flex-start}
+.qr{width:150px;height:150px;flex:none;background:#fff;border:1px solid var(--rule);padding:4px}
+.qr svg{width:100%;height:100%;display:block}
+.share-info{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.share-code{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px}
+.share-code b{font:800 30px/1 var(--mincho);letter-spacing:.2em}
+.chip-s{font-size:12.5px;background:var(--ink);color:#fff;border-radius:999px;padding:1px 10px}
+.share-info input{font-size:13px;min-height:36px}
+.share-info .row{margin-top:0}
+.share-info .row input{flex:1 1 240px;width:auto}
+.live-now{background:#FFF4EE;border:1px solid #F0C9BB;border-left:6px solid var(--shu);border-radius:6px;padding:10px 14px;margin-bottom:16px}
+.live-now h3{font-size:15px;margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.live-item{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px dashed #E5C2B3}
+.live-item:first-of-type{border-top:0}
+.live-item>div{flex:1;min-width:0}
+.live-item small{display:block;color:var(--ink2)}
+.live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--shu);animation:pulse 1.6s ease-in-out infinite;flex:none}
+@media (prefers-reduced-motion:reduce){.live-dot{animation:none}}
+.lib-laws{background:var(--paper);border:1px solid var(--rule);border-left:6px solid var(--blue-e);padding:10px 14px;margin:0 0 14px}
+.lib-laws p{margin:4px 0}
+.lib-cat{font:700 16px var(--mincho);margin:22px 0 6px}
+.lib-tbl tr.off td{opacity:.5}
+.lib-form{display:flex;flex-direction:column;gap:10px}
+.lf-def{display:flex;align-items:center;gap:8px;font-weight:400}
+.opt-fix-file{font-size:13.5px}
+
+/* ---- ダイアログ・通知 ---- */
+.dlg{border:0;border-radius:8px;padding:0;max-width:720px;width:calc(100% - 32px);box-shadow:0 16px 48px rgba(27,36,64,.3)}
+.dlg form{padding:20px 22px}
+.dlg h3{margin:0 0 10px;font:700 18px var(--mincho)}
+.dlg::backdrop{background:rgba(27,36,64,.45)}
+.dlg-a{display:flex;justify-content:flex-end;gap:8px;margin-top:16px;flex-wrap:wrap}
+.spk-r{display:grid;grid-template-columns:14px minmax(0,1fr) 200px;gap:10px;align-items:center;border-bottom:1px solid var(--rule);padding:8px 0}
+.spk-r .dot{width:12px;height:12px;border-radius:50%}
+.spk-r p{margin:2px 0 0;font-size:12.5px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spk-list{max-height:52vh;overflow:auto}
+.toast{position:fixed;left:50%;top:16px;transform:translate(-50%,-140%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:6px;z-index:100;max-width:min(92vw,640px);transition:transform .25s;font-size:14px}
+.toast.show{transform:translate(-50%,0)}
+.toast.err{background:var(--shu)}
+
+@media (max-width:1100px){.meta{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  body{font-size:15.5px}
+  main{padding:14px 12px 96px}
+  .top{padding:8px 12px;gap:6px 12px}
+  .who{margin-left:0}
+  .card{padding:28px 20px 24px}
+  .modes{grid-template-columns:1fr}
+  .meta,.more .grid,.sources,.share{grid-template-columns:1fr}
+  .f.wide{grid-column:auto}
+  .sheet-body{grid-template-columns:1fr}
+  .record{max-height:none;min-height:240px}
+  .line{grid-template-columns:62px minmax(0,1fr) 44px;grid-template-areas:"ts spk vf" "tx tx tx"}
+  .line .vf{opacity:1}
+  .interim{padding-left:14px}
+  .margin{position:fixed;left:0;right:0;bottom:0;max-height:76vh;transform:translateY(105%);transition:transform .25s;z-index:40;border-radius:12px 12px 0 0;box-shadow:0 -10px 30px rgba(27,36,64,.22);padding-bottom:calc(16px + env(safe-area-inset-bottom))}
+  .margin.open{transform:none}
+  .mclose{display:inline-block}
+  .fab{display:flex;align-items:center;gap:6px;position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:35;border:0;background:var(--ink);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;box-shadow:0 6px 18px rgba(27,36,64,.3)}
+  .analysis,.savebox{padding:18px 16px}
+  .spk-r{grid-template-columns:14px minmax(0,1fr)}
+  .spk-r input{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="paid-warn" class="banner" hidden>管理者へ：Gemini APIの有料プラン設定がまだ確認されていません（スクリプト プロパティ PAID_TIER）。設定が終わるまで、機密性の高い内容は入れないでください。</div>
+
+<section id="v-config" class="gate" hidden>
+  <div class="card">
+    <h1 class="mast">書記局 録音処</h1>
+    <p class="org">明星学苑教職員組合</p>
+    <p id="config-msg">まだ設定が終わっていません。index.html の <code>GAS_URL</code> に、Apps Script のウェブアプリのURL（https://script.google.com/macros/s/…/exec）を貼り付けてください。</p>
+  </div>
+</section>
+
+<section id="v-login" class="gate" hidden>
+  <div class="card">
+    <div class="stamp" aria-hidden="true">組合員<br>専用</div>
+    <h1 class="mast">書記局 録音処</h1>
+    <p class="org">明星学苑教職員組合</p>
+    <div class="notice"><h2>ご利用の前に（注意事項）</h2><ol class="notice-list"></ol></div>
+    <form id="login-form" autocomplete="off">
+      <label for="code" class="lbl">個人コード</label>
+      <input id="code" class="code-in" autocapitalize="characters" spellcheck="false" placeholder="XXXX-XXXX-XXXX" required>
+      <label class="agree"><input type="checkbox" id="agree"> 注意事項を読み、守ります</label>
+      <button class="btn primary wide" id="btn-login" type="submit">入る</button>
+      <p class="err" id="login-err" role="alert"></p>
+    </form>
+    <p class="fine">個人コードは書記局から手渡しで配られます。忘れたときは書記局へ。</p>
+  </div>
+</section>
+
+<div id="v-main" hidden>
+  <header class="top">
+    <div class="brand"><span class="mast-s">書記局 録音処</span><span class="org-s">明星学苑教職員組合</span></div>
+    <nav class="tabs" aria-label="画面の切り替え">
+      <button class="tab" data-go="work" type="button">記録する</button>
+      <button class="tab" data-go="records" type="button">記録一覧</button>
+      <button class="tab" data-go="lib" type="button">資料庫</button>
+      <button class="tab" data-go="join" type="button">共有に参加</button>
+      <button class="tab exec" data-go="logs" type="button">利用ログ</button>
+      <button class="tab" data-go="help" type="button">注意事項</button>
+    </nav>
+    <div class="who"><span id="who"></span><button id="btn-logout" class="btn ghost sm" type="button">ログアウト</button></div>
+  </header>
+  <main>
+    <section id="p-work" class="page">
+      <div id="live-now" class="live-now" hidden></div>
+      <div id="setup">
+        <h2 class="step s1"><span>1</span>種類を選ぶ</h2>
+        <div id="modes" class="modes s1" role="radiogroup" aria-label="記録の種類"></div>
+        <h2 class="step"><span>2</span>記録の情報 <small>あとからでも入力できます</small></h2>
+        <div class="meta">
+          <label class="f wide">件名<input id="f-title" placeholder="例）第3回 団体交渉（賃金表の改定）"></label>
+          <label class="f">実施日<input id="f-date" type="date"></label>
+          <label class="f">相手方の呼び方<input id="f-opponent" placeholder="例）法人側"></label>
+          <label class="f full">参加者・立場<textarea id="f-participants" rows="2" placeholder="例）組合側：委員長、書記長、副書記長／法人側：理事長、校長、事務長"></textarea></label>
+        </div>
+        <h2 class="step"><span>3</span>事前に入れておく方針と資料 <small>AIが指摘の根拠にします。なくても始められます</small></h2>
+        <div class="meta prep">
+          <label class="f full">組合の方針・この会議の狙い（要求、譲れない線、確認したいこと）
+            <textarea id="f-policy" rows="5" placeholder="例）賃金表の改定は、組合の同意なしに実施させない。説明資料の提出を必ず求める。"></textarea>
+            <small class="muted"><span id="policy-count">0</span>字／2万字まで。方針と食い違う発言や提案を、AIが「方針」の付箋で指摘します。</small>
+          </label>
+          <div class="f full" id="ctx-drop">
+            <span>事前資料（要求書・前回の回答・議事録・論点メモなど）</span>
+            <textarea id="f-context" rows="5" placeholder="文章を貼り付けるか、下のボタンでファイルを入れてください。前回の回答との食い違いを指摘できます。"></textarea>
+            <div class="row"><label class="btn ghost sm filebtn" for="ctx-in">ファイルを追加（Word・PDF・テキスト）</label><input type="file" id="ctx-in" multiple hidden accept=".docx,.pdf,.txt,.md,.csv,.tsv,text/plain"><small class="muted" id="ctx-total"></small></div>
+            <ul id="ctx-files" class="ctx-files"></ul>
+            <small class="muted">ファイルは端末の中で文字だけを取り出します。ファイルそのものは送られません。スキャンした画像のPDFは読み取れません。</small>
+          </div>
+          <div class="f full"><span>参照資料（協約・規程・組合の方針など。AIが原文で根拠を確かめます）</span><div id="refs" class="refs"></div><small class="muted">資料の登録・差し替えは「資料庫」で行います。国の法律は、取り込み済みのものを自動で参照します。</small></div>
+          <details class="more">
+            <summary>よく出る言葉・話者ボタン</summary>
+            <div class="grid">
+              <label class="f">よく出る言葉（人名・役職・用語を「、」で区切る）<input id="f-vocab" placeholder="例）明星学苑、事務長、賃金表、変形労働時間制"></label>
+              <label class="f">話者ボタン（「、」で区切る。最大8つ）<input id="f-spk"></label>
+            </div>
+            <small class="muted">参加者の名前と、労働・学校の用語は、自動で音声認識に教えます。</small>
+          </details>
+        </div>
+        <h2 class="step s4"><span>4</span>音声を入れる</h2>
+        <div class="sources s4">
+          <button id="src-live" class="source live" type="button" disabled><b>その場で録音する</b><small>会議・団交の最中に。録音しながら文字にし、AIが指摘を付箋で貼ります。ほかの組合員にも同時に共有できます。</small></button>
+          <label class="source dis" id="src-file-l"><b>音声ファイルを選ぶ</b><small>スマホやICレコーダーの録音（m4a・mp3・wav など）を読み込みます。文字起こしだけ／要約／規則・法令チェックまで、選べます。</small><input type="file" id="file-in" accept="audio/*,.m4a,.mp3,.wav,.aac,.ogg,.webm,.mp4" hidden disabled></label>
+        </div>
+        <p class="hint s4" id="mode-hint">まず「1 種類を選ぶ」から選んでください。</p>
+      </div>
+
+      <div id="sheet" hidden>
+        <div class="sheet-head">
+          <select id="sh-mode" class="chip" aria-label="記録の種類"></select>
+          <input id="sh-title" class="title-in" placeholder="件名" aria-label="件名">
+          <span id="sh-meta" class="sh-meta"></span>
+          <div class="sh-actions">
+            <button id="btn-edit-meta" class="btn ghost sm" type="button">情報を編集</button>
+            <button id="btn-speakers" class="btn ghost sm" type="button">話者の名前</button>
+            <button id="btn-new" class="btn ghost sm" type="button">新しい記録</button>
+          </div>
+        </div>
+
+        <div id="livebar" class="bar" hidden>
+          <div class="rec-row">
+            <button id="btn-rec" class="rec" type="button"><span class="rec-dot" aria-hidden="true">録</span><span class="rec-lbl" id="rec-lbl">録音開始</span></button>
+            <div class="rec-info"><span id="rec-time" class="rec-time">00:00:00</span><span class="meter" aria-hidden="true"><i id="meter"></i></span><span id="eng" class="eng">待機中</span></div>
+            <button id="btn-pause" class="btn ghost sm" type="button" hidden>一時停止</button>
+            <button id="btn-stop" class="btn sm stop" type="button" hidden>録音を終える</button>
+          </div>
+          <div class="spk-row"><span class="lbl">いま話している人</span><div id="spk-toggle" class="spk-toggle" role="group" aria-label="いま話している人"></div></div>
+          <div class="opt-row">
+            <label>文字起こし <select id="opt-engine"><option value="live">リアルタイム（おすすめ）</option><option value="chunk">20秒ごと（通信が不安定なとき）</option></select></label>
+            <label>表記 <select id="opt-tmode"><option value="VERBATIM">話したとおり（証拠向き）</option><option value="SMART">読みやすく整える</option></select></label>
+            <label><input type="checkbox" id="opt-fix" checked> 用語の聞き違いをAIで直す</label>
+            <label><input type="checkbox" id="opt-sync"> 他の組合員にもリアルタイムで共有する</label>
+            <label id="scope-l" hidden>共有の範囲 <select id="opt-scope"></select></label>
+            <span id="sync-code" class="sync-code" hidden></span>
+          </div>
+          <div id="sharebox" class="sharebox" hidden>
+            <div class="share-main">
+              <div class="qr" id="qr"></div>
+              <div class="share-info">
+                <div class="share-code"><span class="lbl">共有コード</span><b id="sh-code-big">------</b><span id="sh-scope" class="chip-s"></span></div>
+                <div class="row"><input id="sh-link" readonly aria-label="参加用リンク"><button id="btn-copy-link" class="btn sm" type="button">リンクをコピー</button><button id="btn-copy-code" class="btn ghost sm" type="button">コードをコピー</button><button id="btn-share-native" class="btn ghost sm" type="button" hidden>送る…</button></div>
+                <p class="small muted">リンクを開くか、QRコードを読み取ると、個人コードでログインしたあと自動でこの記録に参加します。範囲の外の人は参加できません。「共有に参加」タブにも、いま共有中の記録が出ます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="viewbar" class="bar" hidden>
+          <div class="rec-row"><span>共有に参加中：<b id="view-code"></b>（記録：<span id="view-owner"></span>）</span><span id="view-state" class="eng">受信中</span><button id="btn-view-stop" class="btn ghost sm" type="button">同期をやめる</button></div>
+        </div>
+
+        <div id="filebar" class="bar" hidden>
+          <div><b id="file-name"></b> <span id="file-meta" class="muted"></span></div>
+          <div class="opt-row">
+            <label><input type="radio" name="ftmode" value="diarize" checked> 話者を分けて時刻つき（おすすめ）</label>
+            <label><input type="radio" name="ftmode" value="plain"> 用語の正確さを優先（話者の区別なし）</label>
+          </div>
+          <fieldset class="pick" id="pick-file">
+            <legend>この音声から作るもの</legend>
+            <label class="pk"><input type="checkbox" checked disabled><span><b>文字起こし</b><small>必ず行います（時刻つき）</small></span></label>
+            <label class="pk"><input type="checkbox" data-p="summary"><span><b>要約</b><small>要約・議題の状況・約束や持ち帰り事項</small></span></label>
+            <label class="pk"><input type="checkbox" data-p="review"><span><b>規則・法令の違反チェック</b><small>協約・規程・国の法律に照らした審査／矛盾／不備。引用は原文と照合します</small></span></label>
+            <label class="pk"><input type="checkbox" data-p="response"><span><b>組合の対応のヒント</b><small>対応案・次に確認する質問・『前進』の報告案（要約と審査も行います）</small></span></label>
+          </fieldset>
+          <label class="opt-fix-file"><input type="checkbox" id="opt-fix-file"> 用語の聞き違いをAIで直す（長い録音では数分かかります）</label>
+          <div><button id="btn-run" class="btn primary" type="button">文字起こしだけ行う</button></div>
+        </div>
+
+        <div id="progress" class="progress" hidden><div class="pbar"><i id="pbar"></i></div><p id="pmsg"></p></div>
+
+        <div class="sheet-body">
+          <div class="record" id="record">
+            <ol id="lines" class="lines"></ol>
+            <p id="interim" class="interim" aria-live="off"></p>
+            <p id="lines-empty" class="empty">ここに文字起こしが表示されます。</p>
+          </div>
+          <aside id="margin" class="margin" aria-label="指摘メモ">
+            <div class="m-head">
+              <h3>指摘メモ</h3>
+              <button id="btn-margin-close" class="btn ghost sm mclose" type="button">閉じる</button>
+              <label class="auto">自動チェック <select id="opt-auto"><option value="smart" selected>おすすめ（要所で）</option><option value="0">しない</option><option value="2">2分ごと</option><option value="3">3分ごと</option><option value="5">5分ごと</option></select></label>
+              <button id="btn-check" class="btn check" type="button">今の発言をチェック</button>
+            </div>
+            <div id="alerts" class="alerts"></div>
+            <p id="alerts-empty" class="empty small">AIが「矛盾」「根拠の不足」「協約・規程・法令との関係」「組合の方針との食い違い」を見つけると、ここに付箋が貼られます。根拠を原文で確認できた指摘だけを貼ります。</p>
+            <p id="dropped" class="dropped" hidden></p>
+          </aside>
+        </div>
+        <button id="btn-latest" class="latest" type="button" hidden>最新の発言へ</button>
+        <button id="fab" class="fab" type="button">指摘 <b id="fab-n">0</b></button>
+
+        <div id="finishbar" class="bar finish" hidden>
+          <fieldset class="pick" id="pick-fin">
+            <legend>分析で作るもの（あとから追加もできます）</legend>
+            <label class="pk"><input type="checkbox" data-p="summary"><span><b>要約</b><small>要約・議題の状況・約束や持ち帰り事項</small></span></label>
+            <label class="pk"><input type="checkbox" data-p="review"><span><b>規則・法令の違反チェック</b><small>協約・規程・国の法律に照らした審査／矛盾／不備</small></span></label>
+            <label class="pk"><input type="checkbox" data-p="response"><span><b>組合の対応のヒント</b><small>対応案・次に確認する質問・『前進』の報告案</small></span></label>
+          </fieldset>
+          <div class="fin-row">
+            <label id="reclean-l"><input type="checkbox" id="opt-reclean"> 録音から清書し直す（話者を自動で分け、精度を上げる。数分かかります）</label>
+            <button id="btn-analyze" class="btn primary" type="button">選んだ分析を行う</button>
+          </div>
+        </div>
+
+        <section id="analysis" class="analysis" hidden></section>
+
+        <section id="savebox" class="savebox" hidden>
+          <h2 class="sec-h">保存と共有</h2>
+          <div class="share" role="radiogroup" aria-label="共有の範囲">
+            <label><input type="radio" name="share" value="none" checked><b>共有しない</b><small>本文はサーバーに保存しません。Wordで手元に保存してください。</small></label>
+            <label><input type="radio" name="share" value="secretariat"><b>書記局と共有</b><small>書記長・副書記長が見られます。</small></label>
+            <label><input type="radio" name="share" value="executive"><b>執行委員会と共有</b><small>執行委員が見られます。</small></label>
+          </div>
+          <p id="share-ai" class="share-ai"></p>
+          <div class="exports">
+            <span class="lbl">Wordに入れるもの</span>
+            <label><input type="checkbox" id="w-tr" checked> 文字起こし</label>
+            <label><input type="checkbox" id="w-an" checked> 分析</label>
+            <label><input type="checkbox" id="w-al" checked> 指摘メモ</label>
+          </div>
+          <div class="save-actions">
+            <button id="btn-word" class="btn" type="button">Wordで保存</button>
+            <button id="btn-audio" class="btn ghost" type="button" hidden>録音を保存（mp3）</button>
+            <button id="btn-save" class="btn primary" type="button">記録を保存する</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="p-records" class="page" hidden>
+      <h2 class="sec-h">記録一覧</h2>
+      <p class="muted">自分が保存した記録と、共有された記録が表示されます。</p>
+      <div id="records"></div>
+    </section>
+
+    <section id="p-lib" class="page" hidden>
+      <h2 class="sec-h">資料庫</h2>
+      <p class="muted">AIが根拠にする資料の置き場です。労働協約・学苑の規程・組合規約は書記局が登録します。組合の方針、要求書、過去の回答や議事録などは、執行委員も登録できます。記録するときに、どの資料を使うか選べます。</p>
+      <div id="lib-laws"></div>
+      <div class="row"><button id="btn-lib-add" class="btn primary" type="button" hidden>資料を追加</button><button id="btn-lib-reload" class="btn ghost sm" type="button">更新</button></div>
+      <div id="lib-list"></div>
+    </section>
+
+    <section id="p-join" class="page" hidden>
+      <h2 class="sec-h">共有に参加</h2>
+      <p class="muted">録音している人が共有を始めると、ここに一覧が出ます。「参加する」を押すと、文字起こしと指摘メモをこの端末で見られます。この端末からも「今の発言をチェック」ができます。共有リンクやQRコードを開いた場合は、ログイン後に自動で参加します。</p>
+      <div class="row"><button id="btn-join-refresh" class="btn ghost sm" type="button">一覧を更新</button></div>
+      <div id="join-list" class="live-now"></div>
+      <h3>コードで参加する</h3>
+      <form id="join-form" class="join"><input id="join-code" maxlength="8" placeholder="K7Q2M9" autocomplete="off" spellcheck="false" aria-label="共有コード"><button class="btn primary" type="submit">参加する</button></form>
+    </section>
+
+    <section id="p-logs" class="page" hidden>
+      <h2 class="sec-h">利用ログ</h2>
+      <div class="log-ctl"><label>期間 <select id="log-days"><option value="1">今日</option><option value="7" selected>7日</option><option value="30">30日</option><option value="0">すべて</option></select></label><button id="btn-logs" class="btn ghost sm" type="button">更新</button><button id="btn-logs-csv" class="btn ghost sm" type="button">CSVで保存</button></div>
+      <div id="log-sum" class="log-sum"></div>
+      <div class="tbl-wrap"><table class="tbl" id="log-tbl"></table></div>
+    </section>
+
+    <section id="p-help" class="page help" hidden>
+      <h2 class="sec-h">注意事項</h2>
+      <div class="notice"><ol class="notice-list"></ol></div>
+      <h3>使い方のこつ</h3>
+      <ul>
+        <li>種類は3つです。「会話」（ヒアリング・相談・面談など）、「組合内会議」（執行委員会・職場会など）、「対外会議」（労使協議会・団体交渉など）。種類に合わせて、AIが注目する点が変わります。</li>
+        <li>団交の前に、「組合の方針」と「事前資料」（要求書・前回の回答など。Word・PDFも入れられます）を入れておくと、食い違いや方針からの逸脱を指摘しやすくなります。毎回使う方針は、「資料庫」に登録しておくと、選ぶだけで使えます。</li>
+        <li>AIは、資料庫でチェックした労働協約・就業規則・学苑の規程と、国の法律（教育・労働関係）を根拠にします。付箋や審査の引用には「原文確認済み」などの印が付きます。「原文に見つかりません」「未確認」の印があるものは、必ず原文で確かめてください。</li>
+        <li>録音しながら、ほかの組合員にも共有できます。範囲（執行委員以上・全組合員・書記局のみ・コードを知る人だけ）を選び、リンクかQRコードを送ります。</li>
+        <li>音声ファイルは、「文字起こしだけ」「要約まで」「規則・法令チェックまで」を選べます。あとから分析を追加することもできます。</li>
+        <li>話す人が替わったら「いま話している人」のボタンを押します（パソコンでは数字キー1〜8）。あとから「話者の名前」で直せます。</li>
+        <li>発言の右の「検証」を押すと、その発言だけをAIが協約・規程・法令と照らして確かめます。文字の誤りは、発言をクリックして直せます。「補」の印は、AIが聞き違いを直した発言です。押すと元に戻せます。</li>
+        <li>スマホで録音するときは、画面を消したり、ほかのアプリに切り替えたりしないでください。録音が止まることがあります。充電しながら使うと安心です。</li>
+        <li>念のため、ICレコーダーなど別の機器でも録音しておくと、あとで「音声ファイルを選ぶ」から清書し直せます。</li>
+        <li>60分を超える録音ファイルは、パソコンで読み込むと安定します。</li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<dialog id="dlg" class="dlg"><form method="dialog"><h3 id="dlg-t"></h3><div id="dlg-b"></div><div id="dlg-a" class="dlg-a"></div></form></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+/* =========================================================
+   書記局 録音処 — 画面（GitHub Pages）
+   明星学苑教職員組合 書記局 / v1.1.0
+   ========================================================= */
+const CONFIG = {
+  // ▼▼▼ Apps Script のウェブアプリURL（https://script.google.com/macros/s/…/exec）を ' ' の間に貼り付けてください ▼▼▼
+  GAS_URL: 'https://script.google.com/macros/s/AKfycbxmtWZT1Fwca0pFdsMEQjlqfPalEqBcdR_IYehq6gi2JK9o4LmZo2EvJVfp-VdLb6H3/exec',
+  // ▲▲▲ ここまで ▲▲▲
+  VERSION: '1.1.0',
+  IDLE_LOCK_MIN: 30,
+  LIVE_WS: 'wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContentConstrained',
+  SEG_SEC: 600, SEG_SEC_PLAIN: 300, SEG_SEC_WAV: 180, CHUNK_SEC: 20, LIVE_GUARD_MS: 12000,
+  LIBS: {
+    docx: { src: 'https://cdn.jsdelivr.net/npm/docx@9.8.1/dist/index.iife.js', sri: 'sha384-VG7nNHhMlezbK+XRucsDQymGisKRncnWqwFcAe+MAHxdR+d/6Brmvux2OlSb8je3', global: 'docx' },
+    lame: { src: 'https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js', sri: 'sha384-xuasJXVcyv3hZq0eYpelEkBC8l4yufatZXDsKuyCU2rqfhDCb+ftuE/mSfZAteiK', global: 'lamejs' },
+    pdfjs: { src: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js', sri: 'sha384-/1qUCSGwTur9vjf/z9lmu/eCUYbpOTgSjmpbMQZ1/CtX2v/WcAIKqRv+U1DUCG6e', global: 'pdfjsLib' },
+    mammoth: { src: 'https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js', sri: 'sha384-/cXAMbzovUIKbBERjPmR3SnPTh8siWr5lsvFYj1Uq4XP0yaJUZJmsh0YXyGv5P0y', global: 'mammoth' },
+    qr: { src: 'https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js', sri: 'sha384-8FWZA6BGMXhsfO+BLtrJK0We6gg5o1JyO8xQm6peWDEUs17ACA5ziE/NIAkl9z2k', global: 'qrcode' }
+  },
+  PDF_WORKER: { src: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js', sri: 'sha384-SnzOobpRMLXZ52iJvZm/C0fYw0OQemTXzTjIsdsfMcrCtCEe9qgzxTd3RSklO5x2' },
+  PDF_CMAP: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
+  LIMITS: { FILE_MB: 20, PAGES: 300, FILE_CHARS: 60000, TOTAL_CHARS: 80000, POLICY_CHARS: 20000 },
+  LIVE_LIST_MS: 30000
+};
+
+const NOTICE = [
+  'このアプリは明星学苑教職員組合の組合員専用です。個人コードは本人だけが使い、ほかの人に教えたり貸したりしないでください。',
+  '利用の記録（日時・利用者・操作の種類）は自動で残り、執行委員会が確認できます。「共有しない」記録の件名や内容は残りません。',
+  '録音は、原則として参加者に録音することを伝えてから行ってください。団体交渉では、録音の扱いを事前に確認しておくと安心です。',
+  '文字起こしや分析には、個人情報や交渉上の秘密が含まれます。組合の外に出さず、SNS・個人のクラウド・学校（法人）が管理するパソコンやアカウントには保存しないでください。',
+  '音声は、文字起こしのためにGoogle（Gemini API）へ送られます。組合の有料プランでは学習には使われませんが、不正利用の監視のため一定期間保管されます。',
+  '文字起こしされた文章・事前資料（アップロードしたファイルから取り出した文字を含む）・組合の方針・協約や規程の本文は、分析と指摘のためにAnthropic（Claude API）へ送られます。音声そのものやファイルそのものは送られません。',
+  'リアルタイム共有は、範囲（執行委員以上・全組合員など）を選べます。共有リンクやQRコードは、組合員が個人コードでログインしなければ開けませんが、画面の撮影や転送は控えてください。',
+  'AIの文字起こし・分析には誤りがあります。重要な発言は録音で、条文は原文で確かめ、法的な判断は上部団体（東京私教連）や弁護士に相談してください。',
+  '使い終わったら必ずログアウトしてください。30分操作がないと自動でロックされます。'
+];
+
+const MODES = [
+  { id: 'talk', label: '会話', short: '会話', desc: 'ヒアリング・相談の聞き取り、管理職や同僚との話し合いなど', spk: ['自分', '相手', 'その他'], opp: '相手' },
+  { id: 'internal', label: '組合内会議', short: '組合内', desc: '執行委員会・職場会・大会など、組合の中の会議', spk: ['司会', '執行委員', '組合員'], opp: '' },
+  { id: 'external', label: '対外会議', short: '対外', desc: '労使協議会・団体交渉など、法人（学苑）側との会議', spk: ['組合側', '法人側', 'その他'], opp: '法人側' }
+];
+const MODE_ALIAS = { hearing: 'talk', meeting: 'external', bargain: 'external' };
+const modeKey = id => MODE_ALIAS[id] || id || '';
+const modeOf = id => MODES.find(m => m.id === modeKey(id));
+const modeLabel = id => (modeOf(id) || {}).label || '';
+const TONE = { '矛盾': 'pink', '不備': 'yellow', '法令': 'blue', '規約': 'blue', '方針': 'teal', '言質': 'green', '確認': 'lilac' };
+const LV = { '高': 'h', '中': 'm', '低': 'l' };
+/* 根拠の確認状況（サーバーが原文と照らした結果） */
+const VST = {
+  ok: { t: '原文確認済み', c: 'ok', d: '引用が、文字起こし・資料・条文の原文に見つかりました。' },
+  part: { t: '一部確認', c: 'part', d: '根拠の一部だけが原文で確認できました。残りは自分で確かめてください。' },
+  idx: { t: '条番号を確認', c: 'idx', d: '条番号の実在は確認できましたが、引用の原文との照合まではできていません。' },
+  unk: { t: '未確認', c: 'unk', d: '原文と照らせませんでした（本文が取り込まれていない法令など）。自分で確かめてください。' },
+  ng: { t: '原文に見つかりません', c: 'ng', d: '引用や条番号が原文に見つかりません。AIの誤りの可能性があります。' }
+};
+const vBadge = v => VST[v] ? `<span class="vb vb-${VST[v].c}" title="${esc(VST[v].d)}">${VST[v].t}</span>` : '';
+const SHARE = { none: '共有しない', secretariat: '書記局と共有', executive: '執行委員会と共有' };
+const PALETTE = ['#2C5A99', '#A53A26', '#2E7856', '#6E4FA0', '#8A6912', '#3E6B79', '#9B3D6E', '#5B6B2D'];
+
+/* ---------- 小道具 ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const uid = () => Math.random().toString(36).slice(2, 9) + Date.now().toString(36).slice(-4);
+const pad = n => String(n).padStart(2, '0');
+const half = s => String(s || '').replace(/[Ａ-Ｚａ-ｚ０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+const splitList = s => String(s || '').split(/[、,，\n]/).map(x => x.trim()).filter(Boolean);
+const fileSafe = s => String(s || '').replace(/[\\/:*?"<>|\s]+/g, '_').slice(0, 60);
+function fmtT(sec) { sec = Math.max(0, Math.floor(+sec || 0)); return `${pad(Math.floor(sec / 3600))}:${pad(Math.floor(sec % 3600 / 60))}:${pad(sec % 60)}`; }
+function parseT(s) { const m = String(s || '').match(/(\d{1,2}):(\d{2})(?::(\d{2}))?/); if (!m) return NaN; return m[3] != null ? +m[1] * 3600 + +m[2] * 60 + +m[3] : +m[1] * 60 + +m[2]; }
+function today() { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
+function nowStr() { const d = new Date(); return `${d.getFullYear()}/${pad(d.getMonth() + 1)}/${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`; }
+function fmtDate(ms) { const d = new Date(ms); return `${d.getMonth() + 1}/${d.getDate()} ${pad(d.getHours())}:${pad(d.getMinutes())}`; }
+function toast(msg, kind = '') { const t = $('#toast'); t.textContent = msg; t.className = 'toast show ' + kind; clearTimeout(toast.t); toast.t = setTimeout(() => { t.className = 'toast'; }, kind === 'err' ? 8000 : 3500); }
+function progress(pct, msg) { if (pct == null) { $('#progress').hidden = true; return; } $('#progress').hidden = false; $('#pbar').style.width = Math.min(100, Math.max(2, pct)) + '%'; if (msg) $('#pmsg').textContent = msg; }
+function blobToB64(blob) { return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1] || ''); r.onerror = () => rej(r.error); r.readAsDataURL(blob); }); }
+function int16ToB64(a) { const u = new Uint8Array(a.buffer, a.byteOffset, a.byteLength); let s = ''; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); }
+function download(blob, name) { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 3000); }
+async function copyText(t) { try { await navigator.clipboard.writeText(t); toast('コピーしました。'); } catch (e) { toast('コピーできませんでした。', 'err'); } }
+const libs = {};
+function loadLib(key) {
+  const L = CONFIG.LIBS[key];
+  if (window[L.global]) return Promise.resolve(window[L.global]);
+  if (!libs[key]) libs[key] = new Promise((res, rej) => {
+    const s = document.createElement('script'); s.src = L.src; s.integrity = L.sri; s.crossOrigin = 'anonymous';
+    s.onload = () => window[L.global] ? res(window[L.global]) : rej(new Error('部品を読み込めませんでした'));
+    s.onerror = () => { libs[key] = null; rej(new Error('部品（' + key + '）を読み込めませんでした。ネットワークを確認してください')); };
+    document.head.appendChild(s);
+  });
+  return libs[key];
+}
+function deviceLabel() {
+  const u = navigator.userAgent;
+  const os = /iPhone/.test(u) ? 'iPhone' : /iPad|Macintosh.*Mobile/.test(u) ? 'iPad' : /Android/.test(u) ? 'Android' : /Mac OS X/.test(u) ? 'Mac' : /Windows/.test(u) ? 'Windows' : /CrOS/.test(u) ? 'Chromebook' : 'その他';
+  const br = /Edg\//.test(u) ? 'Edge' : /Chrome\//.test(u) ? 'Chrome' : /Firefox\//.test(u) ? 'Firefox' : /Safari\//.test(u) ? 'Safari' : '';
+  return (os + ' ' + br).trim();
+}
+class AppError extends Error { constructor(m, c) { super(m); this.code = c || 'ERROR'; } }
+const gasReady = () => /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(CONFIG.GAS_URL.trim());
+
+/* ---------- サーバー（GAS）との通信 ---------- */
+async function api(action, data = {}, opt = {}) {
+  const payload = Object.assign({ action, token: Auth.token || undefined, device: Auth.device }, data);
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), opt.timeoutMs || 90000);
+  let res;
+  try {
+    res = await fetch(CONFIG.GAS_URL.trim(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload), signal: ctrl.signal, redirect: 'follow', credentials: 'omit', cache: 'no-store' });
+  } catch (e) {
+    throw new AppError(e.name === 'AbortError' ? 'サーバーの応答がありませんでした（時間切れ）。' : '通信できませんでした。ネットワークを確認してください。', e.name === 'AbortError' ? 'TIMEOUT' : 'NETWORK');
+  } finally { clearTimeout(timer); }
+  let j;
+  try { j = await res.json(); } catch (e) { throw new AppError('サーバーの応答を読み取れませんでした。GASのURLと公開設定（アクセスできるユーザー：全員）を確認してください。', 'BAD_RESPONSE'); }
+  if (!j || !j.ok) {
+    const err = new AppError((j && j.error) || 'エラーが発生しました。', (j && j.code) || 'ERROR');
+    if (err.code === 'AUTH' && action !== 'login') Auth.expired(err.message);
+    throw err;
+  }
+  return j;
+}
+
+/* ---------- 状態 ---------- */
+const S = { provider: 'claude', user: null, refs: [], laws: null, scopes: [], paid: true, view: 'work', phase: 'setup', rec: null, audio: null, curSpk: '', interim: '', busy: false, dirty: false, editMeta: false, colorMap: {}, multiChunk: false };
+function newRec() {
+  return { lid: uid(), serverId: null, title: '', mode: '', date: today(), participants: '', opponent: '', context: '', policy: '', ctxFiles: [], vocab: '', spkBtns: [], refs: null, speakers: {}, segments: [], alerts: [], analysis: null, share: 'none', source: '', durationSec: 0, engine: '', createdAt: Date.now(), liveBackup: null };
+}
+S.rec = newRec();
+let persistT = 0;
+function markDirty() { S.dirty = true; clearTimeout(persistT); persistT = setTimeout(persist, 1500); }
+function persist() { try { if (S.user) sessionStorage.setItem('rk_work', JSON.stringify({ user: S.user.name, rec: S.rec })); } catch (e) { /* 容量が大きすぎるときは保存しない */ } }
+function currentRefs() { return S.rec.refs || S.refs.filter(r => r.def).map(r => r.name); }
+/* 事前資料：貼り付けた文 + アップロードしたファイルから取り出した文（「使う」にチェックがあるもの） */
+function contextText() {
+  const r = S.rec, parts = [];
+  if ((r.context || '').trim()) parts.push(r.context.trim());
+  (r.ctxFiles || []).filter(f => f.on !== false && f.text).forEach(f => parts.push(`【添付：${f.name}】\n${f.text}`));
+  return parts.join('\n\n').slice(0, CONFIG.LIMITS.TOTAL_CHARS + 2000);
+}
+function metaPayload() { return { mode: modeKey(S.rec.mode), title: S.rec.title, date: S.rec.date, participants: S.rec.participants, opponent: S.rec.opponent, context: contextText(), policy: (S.rec.policy || '').slice(0, CONFIG.LIMITS.POLICY_CHARS), refs: currentRefs() }; }
+/* 音声認識に教える言葉：入力した言葉 → 参加者の名前 → 件名の語 → 標準の用語 */
+const DEFAULT_VOCAB = ['団体交渉', '労使協議会', '労働協約', '就業規則', '三六協定', '時間外労働', '変形労働時間制', '賃金表', '賃金規程', '給与規程', '定期昇給', 'ベースアップ', '一時金', '期末手当', '退職手当', '退職金規程', '雇止め', '無期転換', '有期雇用', '非常勤講師', '嘱託', '専任教員', '学校法人', '理事会', '評議員会', '理事長', '校長', '事務長', '不当労働行為', '誠実交渉義務', '団結権', '組合員', '執行委員', '書記長', '副書記長', '委員長', '東京私教連', '労働基準監督署', '労働委員会', '労働契約法', '労働組合法', '労働基準法', '私立学校法', '教育基本法', '学校教育法', '育児・介護休業法', '安全配慮義務', 'ハラスメント', '懲戒処分', '配置転換', '降格', '解雇', '休職', '年次有給休暇', '振替休日', '部活動', '持ち時間数', '校務分掌', '定年', '再雇用', '明星学苑'];
+function vocabAll(limit = 100) {
+  const r = S.rec, out = [], seen = new Set();
+  const add = w => { w = String(w || '').trim(); if (w.length < 2 || w.length > 30 || seen.has(w)) return; seen.add(w); out.push(w); };
+  splitList(r.vocab).forEach(add);
+  String(r.participants || '').split(/[、,，\n/／:：（）()・\s]+/).filter(w => w && !/[側]$/.test(w) && !/^(組合|法人|学苑|出席|欠席|同席)$/.test(w)).forEach(add);
+  String(r.title || '').split(/[、,，\s（）()／/「」・]+/).forEach(w => { if (w.length >= 3) add(w); });
+  DEFAULT_VOCAB.forEach(add);
+  return out.slice(0, limit);
+}
+
+/* ---------- ログイン ---------- */
+const Auth = {
+  token: null, device: deviceLabel(), lockedUser: null,
+  restore() { try { const s = JSON.parse(sessionStorage.getItem('rk_auth') || 'null'); if (s && s.token) this.token = s.token; } catch (e) { /* なし */ } return !!this.token; },
+  async login(code) { const r = await api('login', { code: half(code) }); this.token = r.token; sessionStorage.setItem('rk_auth', JSON.stringify({ token: r.token })); return r.user; },
+  logout(opts = {}) {
+    if (this.token) api('logout', { locked: !!opts.locked }).catch(() => {});
+    this.token = null; sessionStorage.removeItem('rk_auth');
+    if (!opts.keepWork) { sessionStorage.removeItem('rk_work'); resetWork(true); }
+    S.user = null; showLogin(opts.msg || '');
+  },
+  expired(msg) { if (!this.token) return; this.token = null; sessionStorage.removeItem('rk_auth'); this.lockedUser = S.user && S.user.name; S.user = null; showLogin(msg); }
+};
+
+/* ---------- ダイアログ ---------- */
+const Dlg = {
+  open(title, html, buttons, onAction) {
+    const d = $('#dlg'); $('#dlg-t').textContent = title; $('#dlg-b').innerHTML = html;
+    $('#dlg-a').innerHTML = buttons.map((b, i) => `<button type="button" class="btn ${b.kind || ''}" data-i="${i}">${esc(b.label)}</button>`).join('');
+    return new Promise(res => {
+      $('#dlg-a').onclick = async ev => {
+        const btn = ev.target.closest('button[data-i]'); if (!btn) return;
+        const b = buttons[+btn.dataset.i];
+        if (b.keep) { btn.disabled = true; try { await onAction?.(b.value); } finally { btn.disabled = false; } return; }
+        d.close(); res(b.value);
+      };
+      d.onclose = () => res('cancel');
+      d.showModal();
+    });
+  },
+  confirm(title, msg, yes = 'はい') { return this.open(title, `<p>${esc(msg)}</p>`, [{ label: 'やめる', value: false, kind: 'ghost' }, { label: yes, value: true, kind: 'primary' }]).then(v => v === true); },
+  alert(title, msg) { return this.open(title, `<p>${esc(msg)}</p>`, [{ label: 'わかりました', value: true, kind: 'primary' }]); }
+};
+
+/* ---------- 準備（種類・情報） ---------- */
+function renderModes() {
+  $('#modes').innerHTML = MODES.map(m => `<label class="mode"><input type="radio" name="mode" value="${m.id}"><b>${m.label}</b><small>${m.desc}</small></label>`).join('');
+  $('#sh-mode').innerHTML = MODES.map(m => `<option value="${m.id}">${m.label}</option>`).join('');
+}
+function setMode(id) {
+  id = modeKey(id);
+  const m = modeOf(id); if (!m) return;
+  const prev = modeOf(S.rec.mode);
+  S.rec.mode = id;
+  if (!S.rec.opponent || (prev && S.rec.opponent === prev.opp)) S.rec.opponent = m.opp;
+  if (!S.rec.spkBtns.length || (prev && S.rec.spkBtns.join() === prev.spk.join())) { S.rec.spkBtns = m.spk.slice(); S.curSpk = ''; }
+  fillMeta(); renderSpkToggle(); applyPartDefaults(); updateUI(); markDirty();
+}
+function fillMeta() {
+  const r = S.rec;
+  $('#f-title').value = r.title; $('#sh-title').value = r.title; $('#f-date').value = r.date || '';
+  $('#f-opponent').value = r.opponent; $('#f-participants').value = r.participants; $('#f-context').value = r.context;
+  $('#f-policy').value = r.policy || '';
+  $('#f-vocab').value = r.vocab; $('#f-spk').value = r.spkBtns.join('、');
+  $('#sh-mode').value = modeKey(r.mode) || 'external';
+  $$('#modes input').forEach(i => { i.checked = i.value === modeKey(r.mode); });
+  renderRefs(); renderCtxFiles();
+}
+function readMeta() {
+  const r = S.rec;
+  r.title = $('#f-title').value.trim(); r.date = $('#f-date').value; r.opponent = $('#f-opponent').value.trim();
+  r.participants = $('#f-participants').value.trim(); r.context = $('#f-context').value; r.vocab = $('#f-vocab').value.trim();
+  r.policy = $('#f-policy').value;
+  const btns = splitList($('#f-spk').value).slice(0, 8);
+  r.spkBtns = btns.length ? btns : ((modeOf(r.mode) || MODES[2]).spk.slice());
+  if (S.refs.length) r.refs = $$('#refs input:checked').map(i => i.value);
+}
+function renderRefs() {
+  const box = $('#refs');
+  if (!S.refs.length) { box.innerHTML = '<p class="muted small">参照資料がまだ登録されていません。「資料庫」から登録できます（協約・規程は書記局が登録します）。</p>'; return; }
+  const chosen = currentRefs();
+  const cats = [...new Set(S.refs.map(r => r.cat || 'その他'))];
+  box.innerHTML = cats.map(c => `<div class="ref-cat"><b>${esc(c)}</b>${S.refs.filter(r => (r.cat || 'その他') === c).map(r => `<label class="ref"><input type="checkbox" value="${esc(r.name)}"${chosen.includes(r.name) ? ' checked' : ''}><span>${esc(r.name)}</span><small>${(r.chars / 1000).toFixed(1)}千字</small></label>`).join('')}</div>`).join('');
+}
+
+/* ---------- 話者 ---------- */
+function spkColor(l) {
+  if (!l) return '#9AA3B2';
+  if (!S.colorMap[l]) S.colorMap[l] = PALETTE[Object.keys(S.colorMap).length % PALETTE.length];
+  return S.colorMap[l];
+}
+function defaultName(l) {
+  const m = /^S(\d+):spk_?(\w+)$/.exec(l || '');
+  if (m) return `話者${m[2]}` + (S.multiChunk ? `（区間${m[1]}）` : '');
+  return l || '（話者）';
+}
+function spkName(l) { return (l && S.rec.speakers[l]) || defaultName(l); }
+function renderSpkToggle() {
+  const b = S.rec.spkBtns.length ? S.rec.spkBtns : ((modeOf(S.rec.mode) || MODES[2]).spk);
+  if (!S.curSpk || !b.includes(S.curSpk)) S.curSpk = b[0] || '';
+  $('#spk-toggle').innerHTML = b.map((n, i) => `<button type="button" class="sb${n === S.curSpk ? ' on' : ''}" data-spk="${esc(n)}" style="--spk:${spkColor(n)}" aria-pressed="${n === S.curSpk}"><kbd>${i + 1}</kbd>${esc(spkName(n))}</button>`).join('');
+}
+
+/* ---------- 文字起こしの表示 ---------- */
+function lineHTML(s, i) {
+  return `<li class="line${s.gap ? ' gap' : ''}" data-i="${i}" style="--spk:${spkColor(s.spk)}"><span class="ts">${fmtT(s.t)}</span><button type="button" class="spk" data-a="spk" title="話者を変える">${esc(spkName(s.spk))}</button><span class="tx" data-a="edit">${esc(s.text)}${s.ed ? '<span class="ed">修正</span>' : ''}${s.fx ? `<button type="button" class="fxb" data-a="unfix" title="AIが聞き違いを直しました。元：${esc(s.fx.raw)}（押すと元に戻します）">補</button>` : ''}</span><button type="button" class="vf" data-a="verify" title="この発言をAIで確かめる">検証</button></li>`;
+}
+function renderLines() {
+  S.multiChunk = S.rec.segments.some(s => /^S([2-9]|\d{2,}):/.test(s.spk || ''));
+  $('#lines').innerHTML = S.rec.segments.map(lineHTML).join('');
+  $('#lines-empty').hidden = S.rec.segments.length > 0;
+  refreshFlags();
+}
+function appendLine(i) {
+  const box = $('#record');
+  const pinned = box.scrollTop + box.clientHeight >= box.scrollHeight - 90;
+  $('#lines').insertAdjacentHTML('beforeend', lineHTML(S.rec.segments[i], i));
+  $('#lines-empty').hidden = true;
+  if (pinned) box.scrollTop = box.scrollHeight; else $('#btn-latest').hidden = false;
+}
+function updateLine(i) { const li = $(`#lines li[data-i="${i}"]`); if (li && S.rec.segments[i]) li.outerHTML = lineHTML(S.rec.segments[i], i); refreshFlags(); }
+function transcriptText(markFrom = -1) { return S.rec.segments.map((s, i) => `${markFrom >= 0 && i >= markFrom ? '▶ ' : ''}[${fmtT(s.t)}] ${spkName(s.spk)}: ${s.text}`).join('\n'); }
+function segIndexAt(t) { const g = S.rec.segments; let lo = 0, hi = g.length - 1, ans = 0; while (lo <= hi) { const mid = (lo + hi) >> 1; if (g[mid].t <= t + 1) { ans = mid; lo = mid + 1; } else hi = mid - 1; } return ans; }
+function jumpTo(t) {
+  if (isNaN(t) || !S.rec.segments.length) return;
+  const li = $(`#lines li[data-i="${segIndexAt(t)}"]`); if (!li) return;
+  li.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  li.classList.add('hl'); setTimeout(() => li.classList.remove('hl'), 1800);
+  if (innerWidth <= 900) $('#margin').classList.remove('open');
+}
+function timeBtn(s) { const t = parseT(s); return isNaN(t) ? esc(s || '') : `<button type="button" class="ref" data-t="${t}">${esc(s)}</button>`; }
+
+/* ---------- 付箋（指摘メモ） ---------- */
+function addAlerts(list, { push = true } = {}) {
+  let n = 0;
+  (list || []).forEach(a => {
+    if (!a || !(a.title || a.point)) return;
+    a.id = a.id || uid(); a.atClock = a.atClock || nowStr().slice(-5);
+    if (S.rec.alerts.some(x => x.id === a.id || (a.title && x.title === a.title && !x.closed))) return;
+    S.rec.alerts.unshift(a); n++;
+    if (push) Sync.queueAlert(a);
+  });
+  if (n) { renderAlerts(); markDirty(); }
+  return n;
+}
+function alertHTML(a) {
+  const ev = (a.evidence || []).map(e => { const t = parseT(e.ref); return `<li>${isNaN(t) ? `<span class="ref">${esc(e.ref)}</span>` : `<button type="button" class="ref" data-t="${t}">${esc(e.ref)}</button>`} ${vBadge(e.v)} ${e.quote ? `<q>${esc(e.quote)}</q>` : ''}</li>`; }).join('');
+  const conf = a.confidence ? `<span class="conf" title="AIの確信の度合い">確度 ${esc(a.confidence)}</span>` : '';
+  return `<article class="fusen ${TONE[a.type] || 'lilac'}${a.pin ? ' pin' : ''}" data-id="${esc(a.id)}"><header><span class="tag">${esc(a.type || '確認')}</span><span class="lv lv-${LV[a.level] || 'm'}">${esc(a.level || '中')}</span>${conf}<span class="when">${esc(a.atClock || '')}</span><button type="button" class="x" data-a="pin">${a.pin ? '固定中' : '固定'}</button><button type="button" class="x" data-a="close" aria-label="この付箋を外す">×</button></header><h4>${esc(a.title)}</h4>${a.vs ? `<p class="vline">${vBadge(a.vs)}</p>` : ''}${a.point ? `<p>${esc(a.point)}</p>` : ''}${ev ? `<ul class="ev">${ev}</ul>` : ''}${a.say ? `<div class="say"><span>その場での発言案</span><p>${esc(a.say)}</p><button type="button" class="copy" data-a="copy">コピー</button></div>` : ''}</article>`;
+}
+function renderAlerts() {
+  const list = S.rec.alerts.filter(a => !a.closed).sort((a, b) => (b.pin ? 1 : 0) - (a.pin ? 1 : 0));
+  $('#alerts').innerHTML = list.map(alertHTML).join('');
+  $('#alerts-empty').hidden = list.length > 0;
+  $('#fab-n').textContent = list.length;
+  refreshFlags();
+}
+function refreshFlags() {
+  $$('#lines .line.fl').forEach(li => li.classList.remove('fl'));
+  if (!S.rec.segments.length) return;
+  S.rec.alerts.filter(a => !a.closed).forEach(a => (a.evidence || []).forEach(e => {
+    const t = parseT(e.ref); if (isNaN(t)) return;
+    const li = $(`#lines li[data-i="${segIndexAt(t)}"]`);
+    if (li) { li.classList.add('fl'); li.style.setProperty('--flag', `var(--${TONE[a.type] || 'lilac'}-e)`); }
+  }));
+}
+
+/* ---------- 音声の変換（16kHz・モノラル → MP3の区切り） ---------- */
+class Resampler {
+  constructor(inRate, outRate = 16000) { this.ratio = inRate / outRate; this.pos = 0; this.acc = 0; this.cnt = 0; }
+  process(f) {
+    const out = new Int16Array(Math.ceil(f.length / this.ratio) + 2); let o = 0;
+    for (let i = 0; i < f.length; i++) {
+      this.acc += f[i]; this.cnt++; this.pos += 1;
+      if (this.pos >= this.ratio) { this.pos -= this.ratio; let v = this.acc / this.cnt; this.acc = 0; this.cnt = 0; v = v < -1 ? -1 : v > 1 ? 1 : v; out[o++] = v < 0 ? v * 0x8000 : v * 0x7FFF; }
+    }
+    return out.subarray(0, o);
+  }
+}
+function f32ToI16(f) { const o = new Int16Array(f.length); for (let i = 0; i < f.length; i++) { const v = f[i] < -1 ? -1 : f[i] > 1 ? 1 : f[i]; o[i] = v < 0 ? v * 0x8000 : v * 0x7FFF; } return o; }
+function wavBlob(parts, n) {
+  const h = new DataView(new ArrayBuffer(44)); const w = (o, s) => [...s].forEach((c, i) => h.setUint8(o + i, c.charCodeAt(0)));
+  w(0, 'RIFF'); h.setUint32(4, 36 + n * 2, true); w(8, 'WAVE'); w(12, 'fmt '); h.setUint32(16, 16, true); h.setUint16(20, 1, true); h.setUint16(22, 1, true);
+  h.setUint32(24, 16000, true); h.setUint32(28, 32000, true); h.setUint16(32, 2, true); h.setUint16(34, 16, true); w(36, 'data'); h.setUint32(40, n * 2, true);
+  return new Blob([h.buffer, ...parts], { type: 'audio/wav' });
+}
+class SegmentEncoder {
+  constructor(kind, segSec) { this.kind = kind; this.segSec = segSec; this.segments = []; this.cur = null; this.start = 0; this.onSegment = null; }
+  static async create(segSec) {
+    let kind = 'wav';
+    try { await loadLib('lame'); kind = 'mp3'; } catch (e) { console.warn('MP3にできないためWAVで保存します', e); }
+    return new SegmentEncoder(kind, kind === 'mp3' ? segSec : Math.min(segSec, CONFIG.SEG_SEC_WAV));
+  }
+  open() { this.cur = { n: 0, parts: [], start: this.start }; if (this.kind === 'mp3') this.enc = new window.lamejs.Mp3Encoder(1, 16000, 32); }
+  push(pcm) {
+    const cap = this.segSec * 16000; let off = 0;
+    while (off < pcm.length) {
+      if (!this.cur) this.open();
+      const take = Math.min(cap - this.cur.n, pcm.length - off);
+      const x = pcm.subarray(off, off + take);
+      if (this.kind === 'mp3') { for (let i = 0; i < x.length; i += 1152) { const b = this.enc.encodeBuffer(x.subarray(i, i + 1152)); if (b.length) this.cur.parts.push(new Uint8Array(b)); } }
+      else this.cur.parts.push(new Int16Array(x));
+      this.cur.n += take; off += take;
+      if (this.cur.n >= cap) this.close();
+    }
+  }
+  close() {
+    const c = this.cur; this.cur = null; if (!c || !c.n) return;
+    let blob;
+    if (this.kind === 'mp3') { const f = this.enc.flush(); if (f.length) c.parts.push(new Uint8Array(f)); blob = new Blob(c.parts, { type: 'audio/mpeg' }); }
+    else blob = wavBlob(c.parts, c.n);
+    const seg = { start: c.start, dur: c.n / 16000, blob, mime: this.kind === 'mp3' ? 'audio/mp3' : 'audio/wav' };
+    this.start += seg.dur; this.segments.push(seg);
+    if (this.onSegment) this.onSegment(seg);
+  }
+  finish() { this.close(); return this.segments; }
+}
+async function decodeToMono16k(blob) {
+  const buf = await blob.arrayBuffer();
+  const OAC = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+  let ctx; try { ctx = new OAC(1, 16000, 16000); } catch (e) { ctx = new OAC(1, 44100, 44100); }
+  const ab = await new Promise((res, rej) => { const p = ctx.decodeAudioData(buf, res, rej); if (p && p.then) p.then(res, rej); });
+  let mono = ab.getChannelData(0);
+  if (ab.numberOfChannels > 1) {
+    mono = new Float32Array(ab.length);
+    for (let c = 0; c < ab.numberOfChannels; c++) { const d = ab.getChannelData(c); for (let i = 0; i < d.length; i++) mono[i] += d[i] / ab.numberOfChannels; }
+  }
+  return { pcm: ab.sampleRate === 16000 ? f32ToI16(mono) : new Resampler(ab.sampleRate).process(mono), sec: ab.duration };
+}
+async function encodeOne(pcm, start) { const e = await SegmentEncoder.create(99999); e.start = start; e.push(pcm); return e.finish()[0]; }
+async function splitSeg(seg) {
+  const { pcm } = await decodeToMono16k(seg.blob);
+  const h = Math.floor(pcm.length / 2);
+  return [await encodeOne(pcm.subarray(0, h), seg.start), await encodeOne(pcm.subarray(h), seg.start + h / 16000)];
+}
+function peekDuration(file) {
+  return new Promise(res => { const a = new Audio(); a.preload = 'metadata'; const url = URL.createObjectURL(file); a.onloadedmetadata = () => { res(isFinite(a.duration) ? a.duration : 0); URL.revokeObjectURL(url); }; a.onerror = () => { res(0); URL.revokeObjectURL(url); }; a.src = url; });
+}
+
+/* ---------- 区切りごとの文字起こし（同時に2本・時間切れなら半分に分け直す） ---------- */
+async function transcribeSegments(segs, { tmode, source, totalSec, onProgress }) {
+  const queue = segs.map((seg, i) => ({ seg, idx: i, label: 'S' + (i + 1) }));
+  let labelNo = segs.length, done = 0, total = queue.length;
+  const out = [];
+  const vocab = vocabAll(200);
+  const one = async job => {
+    const b64 = await blobToB64(job.seg.blob);
+    return api('transcribe', { b64, mime: job.seg.mime, offsetSec: job.seg.start, chunkIndex: job.idx, chunkCount: segs.length, chunkLabel: job.label, tmode, vocab, source, mode: S.rec.mode, totalSec }, { timeoutMs: 175000 });
+  };
+  const worker = async () => {
+    while (queue.length) {
+      const job = queue.shift();
+      try {
+        let r;
+        try { r = await one(job); }
+        catch (e) {
+          if (e.code === 'TIMEOUT' && job.seg.dur > 90) {
+            const [a, b] = await splitSeg(job.seg);
+            queue.unshift({ seg: a, idx: -1, label: 'S' + (++labelNo) }, { seg: b, idx: -1, label: 'S' + (++labelNo) });
+            total += 1; onProgress && onProgress(done, total);
+            continue;
+          }
+          if (e.code === 'AUTH') throw e;
+          await sleep(3000); r = await one(job);
+        }
+        out.push(...(r.segments || []));
+      } catch (e) {
+        if (e.code === 'AUTH') throw e;
+        out.push({ t: job.seg.start, spk: '', text: `（${fmtT(job.seg.start)}〜${fmtT(job.seg.start + job.seg.dur)} の文字起こしに失敗しました：${e.message}）`, gap: true });
+      }
+      done++; onProgress && onProgress(done, total);
+    }
+  };
+  await Promise.all([worker(), worker()]);
+  return out.sort((a, b) => a.t - b.t).map(s => ({ id: uid(), t: s.t, spk: s.spk || '', text: s.text, src: 'file', gap: !!s.gap }));
+}
+
+/* ---------- 音声ファイルから ---------- */
+const FileFlow = {
+  file: null,
+  pick(file) {
+    if (!file) return;
+    this.file = file; S.rec.source = 'file'; S.phase = 'file';
+    $('#file-name').textContent = file.name; $('#file-meta').textContent = `${(file.size / 1048576).toFixed(1)}MB`;
+    openSheet();
+    peekDuration(file).then(sec => { if (sec) { $('#file-meta').textContent += `・約${Math.max(1, Math.round(sec / 60))}分`; if (sec > 90 * 60) toast('長い録音です。スマホで止まるときは、パソコンで処理してください。'); } });
+  },
+  async run() {
+    if (!this.file || S.busy) return;
+    readMeta();
+    const tmode = ($('input[name=ftmode]:checked') || {}).value || 'diarize';
+    const parts = chosenParts('#filebar');
+    S.busy = true; updateUI();
+    try {
+      progress(3, '音声を読み込んでいます…');
+      const { pcm, sec } = await decodeToMono16k(this.file);
+      S.rec.durationSec = sec;
+      const enc = await SegmentEncoder.create(tmode === 'diarize' ? CONFIG.SEG_SEC : CONFIG.SEG_SEC_PLAIN);
+      const step = 16000 * 30;
+      for (let off = 0; off < pcm.length; off += step) { enc.push(pcm.subarray(off, off + step)); if ((off / step) % 8 === 0) { progress(5 + 15 * off / pcm.length, '音声を区切っています…'); await sleep(0); } }
+      const segs = enc.finish();
+      S.audio = { segments: segs, kind: enc.kind };
+      progress(20, `文字起こし中…（0/${segs.length}）`);
+      const out = await transcribeSegments(segs, { tmode, source: 'file', totalSec: sec, onProgress: (d, t) => progress(20 + 40 * d / t, `文字起こし中…（${d}/${t}）`) });
+      S.rec.segments = out; S.rec.engine = 'Gemini 3.5 Transcribe'; S.colorMap = {};
+      renderLines(); S.phase = 'done'; markDirty(); updateUI();
+      api('log', { op: 'file_done', mode: S.rec.mode, minutes: sec / 60, detail: `${segs.length}区間・${partsLabel(parts)}` }).catch(() => {});
+      if (out.some(s => /^S\d+:/.test(s.spk))) toast('話者には仮の名前が付いています。「話者の名前」から直せます。');
+      if ($('#opt-fix-file').checked) { progress(62, '用語の聞き違いをAIが直しています…'); await Fixer.all(p => progress(62 + 8 * p, '用語の聞き違いをAIが直しています…')); }
+      S.busy = false;
+      if (parts.length) await runAnalysis(parts);
+      else { progress(100, '文字起こしが終わりました。'); setTimeout(() => progress(null), 1500); toast('文字起こしが終わりました。要約や規則・法令チェックは、下の「分析する」から後で追加できます。'); $('#finishbar').scrollIntoView({ block: 'nearest' }); }
+    } catch (e) {
+      toast(e.name === 'EncodingError' ? 'この音声ファイルは読み込めませんでした（形式を確認してください）。' : (e.message || String(e)), 'err');
+      progress(null);
+    } finally { S.busy = false; updateUI(); }
+  }
+};
+/* ---------- リアルタイム文字起こし（Gemini Live：音声を流しながら文字が返る） ---------- */
+const WORKLET = "class Tap extends AudioWorkletProcessor{constructor(){super();this.b=new Float32Array(2048);this.n=0}process(i){const c=i[0];if(c&&c.length){const a=c[0],b=c[1];for(let k=0;k<a.length;k++){this.b[this.n++]=b?(a[k]+b[k])/2:a[k];if(this.n===2048){this.port.postMessage(this.b.slice(0));this.n=0}}}return true}}registerProcessor('tap',Tap);";
+
+class GeminiLiveEngine {
+  constructor(cb) { this.cb = cb; this.ws = null; this.ready = false; this.queue = []; this.stopped = false; this.paused = false; this.failures = 0; this.sessionAt = 0; this.rotating = false; this.connecting = false; }
+  start() { this.connect(); }
+  async connect() {
+    if (this.connecting || this.stopped) return;
+    this.connecting = true; this.ready = false; this.cb.status('wait', 'リアルタイム接続中…');
+    let tok;
+    try { tok = await api('liveToken', {}, { timeoutMs: 30000 }); }
+    catch (e) { this.connecting = false; if (e.code === 'AUTH') return; return this.fail(e.message); }
+    let ws;
+    try { ws = new WebSocket(CONFIG.LIVE_WS + '?access_token=' + encodeURIComponent(tok.token)); }
+    catch (e) { this.connecting = false; return this.fail('接続できません'); }
+    this.ws = ws; this.connecting = false;
+    const guard = setTimeout(() => { if (!this.ready && this.ws === ws) { try { ws.close(); } catch (e) { /* 閉じ済み */ } setTimeout(() => this.onClose(ws, { code: 4000, reason: '接続がタイムアウトしました' }), 800); } }, CONFIG.LIVE_GUARD_MS);
+    ws.onopen = () => {
+      const tc = { languageCodes: ['ja-JP'], mode: $('#opt-tmode').value === 'SMART' ? 'SMART' : 'VERBATIM' };
+      const vocab = vocabAll(100); if (vocab.length) tc.customVocabulary = vocab;
+      ws.send(JSON.stringify({ setup: { model: 'models/' + (tok.model || 'gemini-3.5-transcribe-live'), generationConfig: { responseModalities: ['TEXT'] }, inputAudioTranscription: tc } }));
+    };
+    ws.onmessage = ev => this.onMessage(ws, ev);
+    ws.onclose = ev => { clearTimeout(guard); this.onClose(ws, ev); };
+    ws.onerror = () => { setTimeout(() => this.onClose(ws, { code: 1006, reason: '' }), 400); };
+  }
+  async onMessage(ws, ev) {
+    let data = ev.data;
+    if (data instanceof Blob) data = await data.text(); else if (data instanceof ArrayBuffer) data = new TextDecoder().decode(data);
+    let m; try { m = JSON.parse(data); } catch (e) { return; }
+    if (m.setupComplete) { if (ws === this.ws) { this.ready = true; this.failures = 0; this.sessionAt = Date.now(); this.cb.status('live', 'リアルタイム'); this.flush(); } return; }
+    const sc = m.serverContent;
+    if (sc) {
+      if (sc.interimInputTranscription && typeof sc.interimInputTranscription.text === 'string' && ws === this.ws) this.cb.interim(sc.interimInputTranscription.text);
+      if (sc.inputTranscription && sc.inputTranscription.text) this.cb.final(sc.inputTranscription.text, null);
+    }
+    if (m.goAway && ws === this.ws) this.rotate();
+  }
+  onClose(ws, ev) {
+    if (ws !== this.ws || ws._done) return;
+    ws._done = true;
+    this.ready = false;
+    if (this.stopped || this.paused) return;
+    if (!this.sessionAt || Date.now() - this.sessionAt < 4000) this.failures++;
+    this.sessionAt = 0;
+    if (this.failures >= 3) return this.fail(`接続が切れました（${ev.code}${ev.reason ? '：' + ev.reason : ''}）`);
+    this.cb.status('wait', '再接続中…');
+    setTimeout(() => this.connect(), Math.min(4000, 600 * Math.pow(2, this.failures)));
+  }
+  fail(reason) { if (this.stopped) return; this.stopped = true; try { this.ws && this.ws.close(); } catch (e) { /* 閉じ済み */ } this.cb.fallback(reason); }
+  send(ws, b64) { ws.send(JSON.stringify({ realtimeInput: { audio: { data: b64, mimeType: 'audio/pcm;rate=16000' } } })); }
+  sendPcm(pcm) {
+    if (this.stopped || this.paused) return;
+    const b64 = int16ToB64(pcm);
+    if (this.ready && this.ws && this.ws.readyState === 1) {
+      this.send(this.ws, b64);
+      if (Date.now() - this.sessionAt > 8.5 * 60000) this.rotate();
+    } else { this.queue.push(b64); if (this.queue.length > 1800) this.queue.shift(); }
+  }
+  flush() { const ws = this.ws; while (this.queue.length && ws && ws.readyState === 1) this.send(ws, this.queue.shift()); }
+  async rotate() {
+    if (this.rotating || this.stopped) return;
+    this.rotating = true;
+    const old = this.ws; this.ready = false; this.ws = null;
+    try { if (old && old.readyState === 1) old.send(JSON.stringify({ realtimeInput: { audioStreamEnd: true } })); } catch (e) { /* 閉じ済み */ }
+    setTimeout(() => { try { old && old.close(1000, 'rotate'); } catch (e) { /* 閉じ済み */ } }, 5000);
+    await this.connect();
+    this.rotating = false;
+  }
+  pause() { this.paused = true; try { if (this.ws && this.ws.readyState === 1) this.ws.send(JSON.stringify({ realtimeInput: { audioStreamEnd: true } })); } catch (e) { /* 閉じ済み */ } }
+  resume() { this.paused = false; if (!this.ws || this.ws.readyState > 1) { this.failures = 0; this.connect(); } }
+  async stop() {
+    this.stopped = true;
+    try { if (this.ws && this.ws.readyState === 1) this.ws.send(JSON.stringify({ realtimeInput: { audioStreamEnd: true } })); } catch (e) { /* 閉じ済み */ }
+    await sleep(2500);
+    try { this.ws && this.ws.close(1000, 'stop'); } catch (e) { /* 閉じ済み */ }
+  }
+}
+
+/* ---------- 予備：20秒ごとにサーバー経由で文字起こし ---------- */
+class ChunkEngine {
+  constructor(cb) { this.cb = cb; this.buf = []; this.n = 0; this.t0 = 0; this.inflight = 0; this.stopped = false; }
+  start() { this.cb.status('live', '20秒ごと'); }
+  sendPcm(pcm) {
+    if (this.stopped) return;
+    if (!this.n) this.t0 = Math.max(0, Live.sec() - pcm.length / 16000);
+    this.buf.push(pcm); this.n += pcm.length;
+    if (this.n >= CONFIG.CHUNK_SEC * 16000) this.flushChunk();
+  }
+  flushChunk() { if (!this.n) return; const parts = this.buf, n = this.n, t0 = this.t0; this.buf = []; this.n = 0; this.process(parts, n, t0); }
+  async process(parts, n, t0) {
+    const pcm = new Int16Array(n); let o = 0; parts.forEach(p => { pcm.set(p, o); o += p.length; });
+    let ss = 0; for (let i = 0; i < n; i += 4) ss += pcm[i] * pcm[i];
+    if (Math.sqrt(ss / (n / 4)) / 32768 < 0.004) return;
+    this.inflight++; this.cb.status('wait', '文字起こし中…');
+    try {
+      const seg = await encodeOne(pcm, t0);
+      const r = await api('transcribe', { b64: await blobToB64(seg.blob), mime: seg.mime, offsetSec: t0, tmode: 'plain', vocab: vocabAll(100), source: 'live', mode: modeKey(S.rec.mode) }, { timeoutMs: 100000 });
+      const text = (r.segments || []).map(s => s.text).join('');
+      if (text) this.cb.final(text, t0);
+    } catch (e) { this.cb.status('error', '文字起こしに失敗：' + e.message); }
+    finally { this.inflight--; if (!this.inflight && !this.stopped) this.cb.status('live', '20秒ごと'); }
+  }
+  pause() { this.flushChunk(); }
+  resume() {}
+  async stop() { this.flushChunk(); this.stopped = true; const t = Date.now(); while (this.inflight && Date.now() - t < 90000) await sleep(300); }
+}
+
+/* ---------- 録音 ---------- */
+const Live = {
+  active: false, paused: false, ending: false, samples: 0, stream: null, ctx: null, node: null, src: null, sink: null, rs: null, enc: null, engine: null,
+  buf: new Int16Array(1600), bufN: 0, wake: null, uiT: 0, level: 0, utterAt: null,
+  sec() { return this.samples / 16000; },
+  async start() {
+    readMeta();
+    if (!S.rec.mode) return toast('種類を選んでください。');
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return toast('このブラウザでは録音できません。', 'err');
+    try { this.stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: true } }); }
+    catch (e) { return toast(e.name === 'NotAllowedError' ? 'マイクの使用が許可されていません。ブラウザの設定でマイクを許可してください。' : 'マイクを使えませんでした：' + e.message, 'err'); }
+    const AC = window.AudioContext || window.webkitAudioContext;
+    this.ctx = new AC(); if (this.ctx.state === 'suspended') await this.ctx.resume();
+    this.rs = new Resampler(this.ctx.sampleRate);
+    this.enc = await SegmentEncoder.create(CONFIG.SEG_SEC);
+    this.samples = 0; this.level = 0;
+    S.audio = { segments: this.enc.segments, kind: this.enc.kind };
+    this.bufN = 0; this.paused = false; this.ending = false; this.utterAt = null;
+    this.engine = this.makeEngine($('#opt-engine').value);
+    this.active = true;
+    await this.tap();
+    this.engine.start();
+    S.phase = 'recording'; S.rec.source = 'live';
+    Check.lastAt = Date.now(); Check.lastSegAt = Date.now(); Check.lastIdx = S.rec.segments.length;
+    this.wakeOn(); clearInterval(this.uiT); this.uiT = setInterval(() => this.ui(), 250);
+    if ($('#opt-sync').checked && !Sync.code) Sync.open();
+    api('log', { op: 'live_start', mode: S.rec.mode }).catch(() => {});
+    updateUI(); markDirty();
+  },
+  async tap() {
+    this.src = this.ctx.createMediaStreamSource(this.stream);
+    this.sink = this.ctx.createGain(); this.sink.gain.value = 0; this.sink.connect(this.ctx.destination);
+    try {
+      if (!this.ctx.audioWorklet) throw new Error('no worklet');
+      const url = URL.createObjectURL(new Blob([WORKLET], { type: 'text/javascript' }));
+      await this.ctx.audioWorklet.addModule(url); URL.revokeObjectURL(url);
+      this.node = new AudioWorkletNode(this.ctx, 'tap');
+      this.node.port.onmessage = ev => this.onFrame(ev.data);
+    } catch (e) {
+      this.node = this.ctx.createScriptProcessor(4096, 1, 1);
+      this.node.onaudioprocess = ev => this.onFrame(new Float32Array(ev.inputBuffer.getChannelData(0)));
+    }
+    this.src.connect(this.node); this.node.connect(this.sink);
+  },
+  onFrame(f) {
+    if (!this.active || this.paused || this.ending) return;
+    let s = 0; for (let i = 0; i < f.length; i += 8) s += f[i] * f[i];
+    this.level = Math.max(this.level, Math.sqrt(s / (f.length / 8)));
+    const pcm = this.rs.process(f);
+    this.samples += pcm.length;
+    this.enc.push(pcm);
+    let off = 0;
+    while (off < pcm.length) {
+      const k = Math.min(1600 - this.bufN, pcm.length - off);
+      this.buf.set(pcm.subarray(off, off + k), this.bufN); this.bufN += k; off += k;
+      if (this.bufN === 1600) { this.engine.sendPcm(this.buf.slice(0)); this.bufN = 0; }
+    }
+  },
+  makeEngine(kind) {
+    const cb = {
+      interim: t => { if (this.utterAt == null && t) this.utterAt = Math.max(0, this.sec() - 1.2); S.interim = t; $('#interim').textContent = t; },
+      final: (t, at) => { const start = at ?? this.utterAt ?? Math.max(0, this.sec() - 2.5); this.utterAt = null; S.interim = ''; $('#interim').textContent = ''; addLiveSeg(t, start); },
+      status: (st, msg) => { const e = $('#eng'); e.textContent = msg; e.dataset.st = st; },
+      fallback: reason => {
+        if (!this.active) return;
+        toast('リアルタイム接続ができないため「20秒ごと」に切り替えました。（' + reason + '）', 'err');
+        this.engine = new ChunkEngine(cb); this.engine.start(); $('#opt-engine').value = 'chunk';
+      }
+    };
+    return kind === 'chunk' ? new ChunkEngine(cb) : new GeminiLiveEngine(cb);
+  },
+  pause() { if (!this.active || this.paused) return; this.paused = true; this.engine.pause(); const e = $('#eng'); e.textContent = '一時停止中'; e.dataset.st = 'wait'; updateUI(); },
+  resume() { if (!this.active || !this.paused) return; this.paused = false; this.engine.resume(); updateUI(); },
+  async stop() {
+    if (!this.active || this.ending) return;
+    this.ending = true; const e = $('#eng'); e.textContent = '終了処理中…'; e.dataset.st = 'wait'; updateUI();
+    try { await this.engine.stop(); } catch (err) { /* 続行 */ }
+    this.active = false; this.ending = false; clearInterval(this.uiT);
+    this.enc.finish();
+    try { this.src.disconnect(); this.node.disconnect(); this.sink.disconnect(); } catch (err) { /* 切断済み */ }
+    this.stream.getTracks().forEach(t => t.stop()); this.ctx.close().catch(() => {});
+    try { this.wake && this.wake.release(); } catch (err) { /* 解放済み */ } this.wake = null;
+    S.rec.durationSec = this.sec();
+    S.rec.engine = this.engine instanceof ChunkEngine ? 'Gemini 3.5 Transcribe（20秒ごと）' : 'Gemini 3.5 Transcribe Live';
+    S.interim = ''; $('#interim').textContent = '';
+    if (Fixer.enabled()) { try { await Promise.race([Fixer.final(), sleep(25000)]); } catch (err) { /* 補正は任意 */ } }
+    Fixer.flushLog();
+    if (Sync.code) await Sync.close();
+    api('log', { op: 'live_stop', mode: S.rec.mode, minutes: S.rec.durationSec / 60, detail: `指摘${S.rec.alerts.length}件・チェック${Check.count}回` }).catch(() => {});
+    S.phase = 'done'; updateUI(); markDirty();
+    $('#finishbar').scrollIntoView({ block: 'nearest' });
+  },
+  ui() {
+    $('#rec-time').textContent = fmtT(this.sec());
+    $('#meter').style.width = Math.min(100, Math.round(this.level * 420)) + '%'; this.level *= 0.85;
+    Check.tick(); Fixer.tick();
+  },
+  async wakeOn() { try { if ('wakeLock' in navigator && !this.wake) { this.wake = await navigator.wakeLock.request('screen'); this.wake.addEventListener('release', () => { this.wake = null; }); } } catch (e) { /* 使えない端末 */ } }
+};
+
+function addLiveSeg(text, t) {
+  text = String(text || '').trim(); if (!text) return;
+  const g = S.rec.segments, spk = S.curSpk || S.rec.spkBtns[0] || '';
+  const last = g[g.length - 1];
+  Check.lastSegAt = Date.now();
+  if (last && last.src === 'live' && !last.fx && !last.fxd && last.spk === spk && last.text.length < 40 && t >= last.t && t - last.t < 20) {
+    last.text += text; updateLine(g.length - 1); Sync.mark(g.length - 1);
+  } else if (last && t < last.t - 2) {
+    let i = g.length; while (i > 0 && g[i - 1].t > t) i--;
+    g.splice(i, 0, { id: uid(), t, spk, text, src: 'live' }); renderLines();
+    for (let k = i; k < g.length; k++) Sync.mark(k);
+  } else {
+    g.push({ id: uid(), t, spk, text, src: 'live' }); appendLine(g.length - 1); Sync.mark(g.length - 1);
+  }
+  markDirty(); updateUI();
+}
+
+/* ---------- 他の端末との同期 ---------- */
+const Sync = {
+  code: null, dirty: new Set(), alerts: [], timer: 0, busy: false,
+  async open() {
+    try {
+      const r = await api('liveOpen', { title: S.rec.title, mode: modeKey(S.rec.mode), scope: $('#opt-scope').value || 'exec' });
+      this.code = r.code; this.dirty = new Set(S.rec.segments.map((_, i) => i));
+      $('#sync-code').hidden = false; $('#sync-code').textContent = '同期コード ' + r.code;
+      clearInterval(this.timer); this.timer = setInterval(() => this.push(), 3000);
+      Share.show(r.code, r.scopeLabel);
+      toast(`共有を始めました（${r.scopeLabel}）。リンクかQRコードで、ほかの組合員を招けます。`);
+    } catch (e) { toast('共有を始められませんでした：' + e.message, 'err'); $('#opt-sync').checked = false; Share.syncOpt(); }
+  },
+  mark(i) { if (this.code) this.dirty.add(i); },
+  queueAlert(a) { if (this.code) this.alerts.push(a); else if (Viewer.code) { this.alerts.push(a); this.pushAsViewer(); } },
+  async push(ended = false) {
+    if (!this.code || this.busy) return;
+    this.busy = true;
+    const idx = [...this.dirty].filter(i => S.rec.segments[i]).sort((a, b) => a - b); this.dirty.clear();
+    const send = idx.slice(0, 120), rest = idx.slice(120);
+    const al = this.alerts.splice(0);
+    try {
+      await api('livePush', { code: this.code, items: send.map(i => { const s = S.rec.segments[i]; return { i, t: s.t, spk: s.spk, text: s.text, ed: !!s.ed }; }), interim: S.interim, speakers: S.rec.speakers, alerts: al, ended });
+      rest.forEach(i => this.dirty.add(i));
+    } catch (e) { idx.forEach(i => this.dirty.add(i)); this.alerts.unshift(...al); }
+    finally { this.busy = false; }
+  },
+  async pushAsViewer() { const al = this.alerts.splice(0); if (!al.length) return; try { await api('livePush', { code: Viewer.code, alerts: al }); } catch (e) { this.alerts.unshift(...al); } },
+  async close() {
+    clearInterval(this.timer); this.busy = false;
+    await this.push(true);
+    try { await api('liveClose', { code: this.code }); } catch (e) { /* 期限切れ */ }
+    this.code = null; $('#sync-code').hidden = true; $('#opt-sync').checked = false; Share.hide(); Share.syncOpt();
+  }
+};
+
+const Viewer = {
+  code: null, since: 0, editSeq: 0, alertSeq: 0, timer: 0, pulling: false,
+  async join(raw) {
+    const code = half(raw).toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (code.length !== 6) return toast('同期コードは6文字です。');
+    if (Live.active) return toast('録音中は参加できません。');
+    if (this.code === code) { go('work'); return; }
+    if (S.rec.segments.length && S.dirty && !(await Dlg.confirm('いまの記録を閉じて参加しますか？', 'Wordや記録一覧に保存していない内容は失われます。', '閉じて参加'))) return;
+    try {
+      const r = await api('livePull', { code, since: 0 });
+      resetWork(true);
+      this.code = code; this.since = 0; this.editSeq = 0; this.alertSeq = 0;
+      const mo = modeOf(r.meta.mode) || MODES[2];
+      S.rec.mode = mo.id; S.rec.title = r.meta.title || ''; S.rec.source = 'sync';
+      S.rec.spkBtns = mo.spk.slice(); S.rec.opponent = mo.opp;
+      S.phase = 'viewer'; fillMeta();
+      $('#view-code').textContent = code; $('#view-owner').textContent = r.meta.owner + (r.meta.scope ? '・' + scopeLabel(r.meta.scope) : '');
+      go('work'); openSheet(); this.apply(r);
+      Check.lastAt = Date.now(); Check.lastSegAt = Date.now(); Check.lastIdx = 0;
+      clearInterval(this.timer); this.timer = setInterval(() => this.pull(), 3000);
+    } catch (e) { toast(e.message, 'err'); }
+  },
+  apply(r) {
+    let rerender = false;
+    if (r.meta.speakers) S.rec.speakers = r.meta.speakers;
+    (r.items || []).forEach(it => {
+      const seg = { id: 'v' + it.i, t: it.t, spk: it.spk, text: it.text, ed: !!it.ed, src: 'live' };
+      if (it.i === S.rec.segments.length) { S.rec.segments.push(seg); if (!rerender) appendLine(it.i); }
+      else { S.rec.segments[it.i] = seg; rerender = true; }
+    });
+    (r.edits || []).forEach(it => { if (S.rec.segments[it.i]) { S.rec.segments[it.i] = { id: 'v' + it.i, t: it.t, spk: it.spk, text: it.text, ed: !!it.ed, src: 'live' }; rerender = true; } });
+    S.rec.segments = S.rec.segments.filter(Boolean);
+    if (rerender) renderLines();
+    if ((r.items || []).length) Check.lastSegAt = Date.now();
+    this.since = S.rec.segments.length; this.editSeq = r.editSeq || 0; this.alertSeq = r.alertSeq || 0;
+    addAlerts((r.alerts || []).map(a => Object.assign({}, a)), { push: false });
+    S.interim = r.meta.interim || ''; $('#interim').textContent = S.interim;
+    $('#view-state').textContent = r.meta.ended ? '記録は終わりました' : '受信中';
+    markDirty(); updateUI();
+    if (r.meta.ended) this.end(true);
+  },
+  async pull() {
+    if (!this.code || this.pulling) return;
+    this.pulling = true;
+    try { this.apply(await api('livePull', { code: this.code, since: this.since, editSeq: this.editSeq, alertSeq: this.alertSeq }, { timeoutMs: 20000 })); }
+    catch (e) { $('#view-state').textContent = '再接続中…'; if (e.code === 'NOT_FOUND') this.end(true); }
+    finally { this.pulling = false; }
+  },
+  end(finished) {
+    clearInterval(this.timer); this.code = null; S.phase = 'done'; updateUI();
+    if (finished) toast('記録が終わりました。この端末でも分析・Wordでの保存ができます。');
+  }
+};
+
+/* ---------- その場のチェック ---------- */
+/* 「自動（おすすめ）」：約束・決定・規程や法律・資料の話が出たら、話が一区切りついたところでチェックする */
+const KEY_RE = /約束|確約|決定|決まっ|決めた|前向き|検討|持ち帰|できません|出来ません|お答え|規程|規定|協約|就業規則|法律|法令|違反|違法|不利益|同意|了解|合意|協議|解雇|雇止め|懲戒|配転|異動|降格|団体交渉|団交|誠実|撤回|廃止|削減|減額|引き下げ|いつまで|までに|必ず|認めません|認める|資料|根拠/;
+const Check = {
+  running: false, lastIdx: 0, lastAt: 0, lastSegAt: 0, count: 0, dropped: 0,
+  async run(opts = {}) {
+    if (this.running) return;
+    if (!S.rec.segments.length) return toast('まだ発言がありません。');
+    readMeta();
+    this.running = true; updateUI(); $('#btn-check').textContent = 'チェック中…';
+    try {
+      const f = opts.focus != null ? S.rec.segments[opts.focus] : null;
+      const r = await api('liveCheck', Object.assign(metaPayload(), {
+        transcript: transcriptText(f ? -1 : this.lastIdx), newFrom: this.lastIdx,
+        focus: f ? `[${fmtT(f.t)}] ${spkName(f.spk)}: ${f.text}` : '',
+        known: S.rec.alerts.filter(a => !a.closed).slice(0, 40).map(a => a.title)
+      }), { timeoutMs: 100000 });
+      if (!f) this.lastIdx = S.rec.segments.length;
+      this.lastAt = Date.now(); this.count++;
+      const n = addAlerts(r.alerts || []);
+      this.dropped += r.dropped || 0; renderDropped();
+      toast((n ? `指摘を${n}件、付箋に貼りました。` : '新しい指摘はありませんでした。') + (r.dropped ? `（根拠を確認できず見送った指摘が${r.dropped}件あります）` : ''));
+      if (n && innerWidth <= 900) $('#margin').classList.add('open');
+    } catch (e) { if (e.code !== 'AUTH') toast(e.message, 'err'); }
+    finally { this.running = false; $('#btn-check').textContent = '今の発言をチェック'; updateUI(); }
+  },
+  tick() {
+    const mode = $('#opt-auto').value;
+    if (mode === '0' || this.running || !(Live.active || Viewer.code) || (Live.active && Live.paused)) return;
+    const now = Date.now(), gap = now - this.lastAt;
+    const fresh = S.rec.segments.slice(this.lastIdx);
+    const n = fresh.reduce((k, s) => k + s.text.length, 0);
+    if (mode !== 'smart') { if (gap >= +mode * 60000 && n >= 120) this.run(); return; }
+    if (n < 60) return;
+    const quiet = now - this.lastSegAt >= 7000 && !S.interim;
+    if (quiet && gap >= 75000 && KEY_RE.test(fresh.map(s => s.text).join(''))) return this.run();
+    if (quiet && gap >= 120000 && n >= 400) return this.run();
+    if (gap >= 300000 && n >= 120) this.run();
+  }
+};
+function renderDropped() {
+  const el = $('#dropped'); if (!el) return;
+  el.hidden = !Check.dropped;
+  el.textContent = Check.dropped ? `根拠を原文で確認できなかったため、見送った指摘：${Check.dropped}件（AIの思い違いを避けるため、貼っていません）` : '';
+}
+
+/* ---------- 仕上げ（清書し直し → 分析） ---------- */
+function mapFromLive(newSegs, liveSegs) {
+  const votes = {};
+  newSegs.forEach((d, k) => {
+    if (!d.spk) return;
+    const end = (newSegs[k + 1] || { t: d.t + 30 }).t;
+    liveSegs.forEach(l => { if (l.spk && l.t >= d.t - 3 && l.t < end) { const v = votes[d.spk] = votes[d.spk] || {}; v[l.spk] = (v[l.spk] || 0) + d.text.length; } });
+  });
+  const map = {};
+  Object.entries(votes).forEach(([lab, v]) => { const best = Object.entries(v).sort((a, b) => b[1] - a[1])[0]; if (best) map[lab] = best[0]; });
+  return map;
+}
+async function finish() {
+  if (S.busy) return;
+  readMeta();
+  const parts = chosenParts('#finishbar');
+  if (!parts.length) return toast('作る分析（要約・規則や法令のチェック・対応のヒント）を選んでください。');
+  if ($('#opt-reclean').checked && S.audio && S.audio.segments.length && S.rec.source === 'live') {
+    S.busy = true; updateUI();
+    try {
+      const backup = S.rec.segments.map(s => Object.assign({}, s));
+      const out = await transcribeSegments(S.audio.segments, { tmode: 'diarize', source: 'reclean', totalSec: S.rec.durationSec, onProgress: (d, t) => progress(4 + 50 * d / t, `録音から清書しています…（${d}/${t}）`) });
+      if (out.some(s => !s.gap)) {
+        S.rec.liveBackup = backup; S.rec.segments = out;
+        Object.assign(S.rec.speakers, mapFromLive(out, backup));
+        S.rec.engine = 'Gemini 3.5 Transcribe（録音から清書）'; $('#opt-reclean').checked = false;
+        renderLines(); markDirty();
+        if (Fixer.enabled()) { progress(56, '用語の聞き違いをAIが直しています…'); await Fixer.all(p => progress(56 + 6 * p, '用語の聞き違いをAIが直しています…')); }
+      }
+    } catch (e) { toast(e.message, 'err'); }
+    finally { S.busy = false; updateUI(); }
+  }
+  await runAnalysis(parts);
+}
+const PART_NAME = { summary: '要約', review: '規則・法令のチェック', response: '対応のヒント' };
+const PART_ORDER = ['summary', 'review', 'response'];
+/* どの分析をすでに行ったか（旧い記録は、中身があるものを「行った」とみなす） */
+function ranFlags(a) {
+  a = a || {}; const r = Object.assign({}, a._ran || {});
+  if (!a._ran) { r.summary = 'summary' in a; r.review = 'issues' in a; r.response = 'responses' in a || 'member_report' in a; }
+  return r;
+}
+async function runAnalysis(parts) {
+  parts = PART_ORDER.filter(p => (parts && parts.length ? parts : PART_ORDER).includes(p));
+  if (!S.rec.segments.length) return toast('文字起こしがありません。');
+  if (S.busy) return;
+  readMeta(); S.busy = true; updateUI();
+  const base = Object.assign(metaPayload(), { transcript: transcriptText(), minutes: S.rec.durationSec / 60 });
+  const prev = S.rec.analysis || {};
+  const ran = ranFlags(prev); parts.forEach(p => { ran[p] = true; });
+  const a = S.rec.analysis = Object.assign({}, prev, { _loading: parts.slice(), _err: {}, _ran: ran });
+  renderAnalysis(); $('#analysis').scrollIntoView({ block: 'start' });
+  const part = (p, extra = {}) => api('analyze', Object.assign({}, base, extra, { part: p }), { timeoutMs: 175000 })
+    .then(r => { Object.assign(a, r.data); })
+    .catch(e => { a._err[p] = e.message; })
+    .finally(() => { a._loading = a._loading.filter(x => x !== p); renderAnalysis(); });
+  try {
+    const first = parts.filter(p => p !== 'response');
+    const lg = (p, extra = {}) => Object.assign({ logFirst: p === parts[0], partsLabel: partsLabel(parts) }, extra);
+    if (first.length) {
+      progress(62, `AIが分析しています（${first.map(p => PART_NAME[p]).join('・')}）…`);
+      await Promise.all(first.map(p => part(p, lg(p))));
+    }
+    if (parts.includes('response')) {
+      progress(86, 'AIが対応のヒントをまとめています…');
+      await part('response', lg('response', { prior: priorJSON(a) }));
+    }
+    progress(100, '分析が終わりました。');
+    setTimeout(() => progress(null), 1500);
+  } finally { S.busy = false; markDirty(); updateUI(); }
+}
+function priorJSON(a) {
+  return JSON.stringify({ summary: a.summary, agenda: a.agenda, commitments: a.commitments, issues: (a.issues || []).map(i => ({ topic: i.topic, assessment: i.assessment, reason: i.reason, rules: i.rules, laws: i.laws })), contradictions: a.contradictions, deficiencies: a.deficiencies, alerts: S.rec.alerts.filter(x => !x.closed).map(x => x.title) }).slice(0, 24000);
+}
+async function retryPart(p) {
+  const a = S.rec.analysis; if (!a || S.busy) return;
+  S.busy = true; a._loading = [p]; delete a._err[p]; renderAnalysis(); updateUI();
+  try {
+    const extra = p === 'response' ? { prior: priorJSON(a) } : {};
+    const r = await api('analyze', Object.assign(metaPayload(), { transcript: transcriptText(), minutes: S.rec.durationSec / 60, part: p }, extra), { timeoutMs: 175000 });
+    Object.assign(a, r.data);
+  } catch (e) { a._err[p] = e.message; }
+  finally { a._loading = []; S.busy = false; renderAnalysis(); markDirty(); updateUI(); }
+}
+
+const ASSESS = { '問題なし': 'ok', '問題の可能性': 'warn', '違法・不当の疑い': 'bad', '要確認': 'chk' };
+function issueHTML(i) {
+  const note = x => x.vn ? `<small class="vn">${esc(x.vn)}</small>` : '';
+  const cites = [
+    ...(i.rules || []).map(r => `<li><b>${esc(r.name)} ${esc(r.article || '')}</b> ${vBadge(r.v)}${r.quote ? `<q>${esc(r.quote)}</q>` : ''}${note(r)}</li>`),
+    ...(i.laws || []).map(l => `<li class="c-law"><b>${esc(l.name)} ${esc(l.article || '')}</b> ${vBadge(l.v)}${esc(l.point || '')}${note(l)}</li>`)
+  ].join('');
+  const conf = i.confidence ? `<span class="conf" title="AIの確信の度合い">確度 ${esc(i.confidence)}</span>` : '';
+  return `<article class="issue a-${ASSESS[i.assessment] || 'chk'}"><header><span class="badge">${esc(i.assessment || '要確認')}</span><h4>${esc(i.topic)}</h4>${conf}</header>${i.vnote ? `<p class="vnote">${esc(i.vnote)}</p>` : ''}${(i.quote || i.statement) ? `<p class="stmt">${i.quote ? `<q>${esc(i.quote)}</q> ${vBadge(i.qv)} ` : ''}${esc(i.statement || '')} ${timeBtn(i.time)} ${esc(i.speaker || '')}</p>` : ''}${cites ? `<ul class="cites">${cites}</ul>` : ''}${i.reason ? `<p class="reason">${esc(i.reason)}</p>` : ''}${i.policy ? `<p class="policy-note"><b>組合の方針との関係：</b>${esc(i.policy)}</p>` : ''}</article>`;
+}
+function renderAnalysis() {
+  const a = S.rec.analysis, box = $('#analysis');
+  if (!a) { box.hidden = true; box.innerHTML = ''; return; }
+  box.hidden = false;
+  const L = a._loading || [], E = a._err || {}, R = ranFlags(a);
+  const show = p => R[p] || L.includes(p) || E[p];
+  const state = p => L.includes(p) ? '<p class="loading">AIが作成しています…</p>' : E[p] ? `<p class="err">うまくいきませんでした：${esc(E[p])} <button type="button" class="btn ghost sm" data-retry="${p}">やり直す</button></p>` : '';
+  const sec = (title, body, p) => show(p) ? `<section class="a-sec"><h3>${title}</h3>${state(p) || body || '<p class="muted">該当なし</p>'}</section>` : '';
+  const tbl = (head, rows) => rows.length ? `<div class="tbl-wrap"><table class="tbl"><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table></div>` : '';
+  let h = '<h2 class="sec-h">分析</h2><p class="disclaimer">AIによる分析です。協約・規程の条文は参照資料の原文で、発言は録音で確かめ、最終的な判断は執行委員会・上部団体・弁護士と行ってください。引用や条番号には、原文と照らした結果（原文確認済み／一部確認／条番号を確認／未確認／原文に見つかりません）を付けています。</p>';
+  const notRun = PART_ORDER.filter(p => !show(p));
+  if (notRun.length) h += `<p class="not-run">この記録では、次の分析はまだ行っていません：${notRun.map(p => PART_NAME[p]).join('・')}。下の「分析する」から追加できます。</p>`;
+  h += sec('要約', a.summary ? `<p class="summary">${esc(a.summary)}</p>` : '', 'summary');
+  h += sec('議題・要求項目の状況', tbl(['議題', '状況', '経過', '時刻'], (a.agenda || []).map(g => [esc(g.topic), `<span class="st">${esc(g.status)}</span>`, esc(g.detail), timeBtn(g.time)])), 'summary');
+  h += sec('妥当性の審査（協約・規程・法令）', (a.issues || []).map(issueHTML).join(''), 'review');
+  h += sec('矛盾点', (a.contradictions || []).map(c => `<article class="issue a-bad"><header><h4>${esc(c.title)}</h4></header><p class="stmt">A：${timeBtn(c.a?.time)} ${esc(c.a?.speaker || '')} <q>${esc(c.a?.quote || '')}</q> ${vBadge(c.a?.v)}</p><p class="stmt">B：${timeBtn(c.b?.time)} ${esc(c.b?.speaker || '')} <q>${esc(c.b?.quote || '')}</q> ${vBadge(c.b?.v)}</p>${c.explanation ? `<p class="reason">${esc(c.explanation)}</p>` : ''}</article>`).join(''), 'review');
+  h += sec('不備（根拠・資料・手続き）', (a.deficiencies || []).length ? `<ul>${a.deficiencies.map(x => `<li><b>${esc(x.title)}</b> ${esc(x.detail || '')} ${timeBtn(x.time)} ${esc(x.speaker || '')}</li>`).join('')}</ul>` : '', 'review');
+  h += sec('約束・持ち帰り事項', tbl(['誰が', '内容', '期限', '時刻'], (a.commitments || []).map(c => [esc(c.who), esc(c.what), esc(c.due), timeBtn(c.time)])), 'summary');
+  h += sec('組合としての対応のヒント', tbl(['優先', '対応', '理由・根拠', '時期'], (a.responses || []).map(r => [`<b>${esc(r.priority)}</b>`, esc(r.action), esc(r.reason), esc(r.when)])), 'response');
+  h += sec('次に確認すべき質問', (a.questions || []).length ? `<ol class="qlist">${a.questions.map((q, i) => `<li>${esc(q)}<button type="button" class="btn ghost sm" data-copyq="${i}">コピー</button></li>`).join('')}</ol>` : '', 'response');
+  const sh = a.sharing || {};
+  h += sec('共有について（AIの提案）', sh.recommendation ? `<p><b>${esc(sh.recommendation)}</b>（${esc(sh.scope_hint || '')}）${esc(sh.reason || '')}</p>${(sh.privacy || []).length ? `<p class="muted">伏せる情報：${sh.privacy.map(esc).join('、')}</p>` : ''}` : '', 'response');
+  h += sec('組合員への報告（『前進』掲載案）', `<textarea id="report" rows="9" aria-label="組合員への報告文">${esc(a.member_report || '')}</textarea><div class="row"><button type="button" class="btn ghost sm" data-copyreport>コピー</button><small class="muted">個人が特定される情報がないか、必ず確かめてから使ってください。</small></div>`, 'response');
+  if ((a.caveats || []).length && show('summary')) h += sec('注意（聞き取りが不確かな箇所など）', `<ul>${a.caveats.map(c => `<li>${esc(c)}</li>`).join('')}</ul>`, 'summary');
+  box.innerHTML = h;
+  $('#share-ai').innerHTML = sh.recommendation ? `AIの提案：<b>${esc(sh.recommendation)}</b>（${esc(sh.scope_hint || '')}）` : '';
+}
+
+/* ---------- 話者の名前 ---------- */
+async function openSpeakers() {
+  const st = {};
+  S.rec.segments.forEach(s => { if (!s.spk) return; const x = st[s.spk] = st[s.spk] || { n: 0, first: s.t, last: s.t, lines: [] }; x.n++; x.last = s.t; if (x.lines.length < 3) x.lines.push(s.text.slice(0, 140)); });
+  const labels = Object.keys(st);
+  if (!labels.length) return toast('話者の付いた発言がまだありません。');
+  const cands = [...new Set([...S.rec.spkBtns, ...splitList(S.rec.participants.replace(/[／/:：（）()]/g, '、'))])].slice(0, 24);
+  const body = `<p class="muted small">同じ人には同じ名前を付けると、ひとりの話者としてまとまります。空欄なら仮の名前のままです。</p><datalist id="spk-cands">${cands.map(c => `<option value="${esc(c)}">`).join('')}</datalist><div class="spk-list">${labels.map(l => `<div class="spk-r"><span class="dot" style="background:${spkColor(l)}"></span><div><b>${esc(defaultName(l))}</b> <small class="muted">${fmtT(st[l].first)}〜 ${st[l].n}回</small><p>${esc(st[l].lines[0] || '')}</p></div><input data-l="${esc(l)}" list="spk-cands" value="${esc(S.rec.speakers[l] || '')}" placeholder="${esc(defaultName(l))}" aria-label="${esc(defaultName(l))}の名前"></div>`).join('')}</div>`;
+  const v = await Dlg.open('話者の名前', body, [{ label: 'AIで推定する', value: 'ai', kind: 'ghost', keep: true }, { label: '閉じる', value: 'cancel', kind: 'ghost' }, { label: '反映する', value: 'ok', kind: 'primary' }], async () => {
+    try {
+      const r = await api('guessSpeakers', { mode: S.rec.mode, participants: S.rec.participants, candidates: cands, samples: labels.map(l => ({ label: l, range: `${fmtT(st[l].first)}〜${fmtT(st[l].last)}`, lines: st[l].lines })) }, { timeoutMs: 100000 });
+      (r.map || []).forEach(m => { const inp = $$('#dlg-b input[data-l]').find(i => i.dataset.l === m.label); if (inp && m.name && m.name !== '不明' && !inp.value) inp.value = m.name; });
+      toast('推定した名前を入れました。確かめてから「反映する」を押してください。');
+    } catch (e) { toast(e.message, 'err'); }
+  });
+  if (v !== 'ok') return;
+  $$('#dlg-b input[data-l]').forEach(i => { const val = i.value.trim(); if (val) S.rec.speakers[i.dataset.l] = val; else delete S.rec.speakers[i.dataset.l]; });
+  renderLines(); renderSpkToggle(); markDirty();
+  if (Sync.code) S.rec.segments.forEach((_, i) => Sync.mark(i));
+}
+
+/* ---------- Word で保存 ---------- */
+async function exportWord() {
+  readMeta();
+  if (!S.rec.segments.length && !S.rec.analysis) return toast('まだ内容がありません。');
+  const btn = $('#btn-word'); btn.disabled = true;
+  try {
+    const D = await loadLib('docx');
+    const share = ($('input[name=share]:checked') || {}).value || 'none';
+    const doc = buildDocx(D, {
+      title: S.rec.title || '（件名なし）', mode: modeLabel(S.rec.mode), date: S.rec.date, participants: S.rec.participants, opponent: S.rec.opponent,
+      scope: analysisScope(), files: (S.rec.ctxFiles || []).filter(f => f.on !== false).map(f => f.name).join('、'),
+      analysisBy: S.provider === 'gemini' ? 'Gemini（Google）' : 'Claude（Anthropic）', author: S.user ? S.user.name : '', exportedAt: nowStr(), share: SHARE[share], engine: S.rec.engine, duration: S.rec.durationSec ? fmtT(S.rec.durationSec) : '',
+      refs: currentRefs(), segments: S.rec.segments.map(s => ({ t: fmtT(s.t), name: spkName(s.spk), text: s.text, ed: !!s.ed, fx: !!s.fx })),
+      analysis: $('#w-an').checked ? S.rec.analysis : null, vt: Object.fromEntries(Object.entries(VST).map(([k, v]) => [k, v.t])), alerts: $('#w-al').checked ? S.rec.alerts.filter(a => !a.closed) : [], includeTranscript: $('#w-tr').checked
+    });
+    const blob = await D.Packer.toBlob(doc);
+    download(blob, `記録_${S.rec.date || today()}_${modeLabel(S.rec.mode)}_${fileSafe(S.rec.title || '件名なし')}.docx`);
+    api('log', { op: 'word', mode: S.rec.mode, share, title: S.rec.title }).catch(() => {});
+  } catch (e) { toast('Wordを作れませんでした：' + e.message, 'err'); }
+  finally { btn.disabled = false; }
+}
+function downloadAudio() {
+  const g = (S.audio && S.audio.segments) || []; if (!g.length) return;
+  const base = `録音_${S.rec.date || today()}_${fileSafe(S.rec.title || modeLabel(S.rec.mode))}`;
+  if (S.audio.kind === 'mp3') download(new Blob(g.map(s => s.blob), { type: 'audio/mpeg' }), base + '.mp3');
+  else g.forEach((s, i) => download(s.blob, `${base}_${i + 1}.wav`));
+  api('log', { op: 'audio', mode: S.rec.mode, minutes: S.rec.durationSec / 60 }).catch(() => {});
+}
+
+/*DOCX-START*/
+function buildDocx(D, d) {
+  const { Document, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle, AlignmentType, HeadingLevel, Header, Footer, PageNumber, LevelFormat, TableLayoutType, PositionalTab, PositionalTabAlignment, PositionalTabRelativeTo, PositionalTabLeader } = D;
+  const M = { ascii: 'Yu Mincho', eastAsia: '游明朝', hAnsi: 'Yu Mincho', cs: 'Yu Mincho' };
+  const G = { ascii: 'Yu Gothic', eastAsia: '游ゴシック', hAnsi: 'Yu Gothic', cs: 'Yu Gothic' };
+  const INK = '1B2440', SUB = '5B6577', SHU = 'C23A1E', RULE = 'B9C4D4', FILL = 'EEF2F7', W = 9638;
+  const s = v => String(v ?? '');
+  const VT = d.vt || {};
+  const vt = v => VT[v] ? `［${VT[v]}］` : '';
+  const run = (t, o = {}) => new TextRun(Object.assign({ text: s(t) }, o));
+  const para = (children, o = {}) => new Paragraph(Object.assign({ spacing: { after: 80, line: 320 } }, o, { children }));
+  const P = (t, o = {}, ro = {}) => s(t).split(/\r?\n/).map(line => para([run(line, ro)], o));
+  const H1 = t => new Paragraph({ heading: HeadingLevel.HEADING_1, children: [run(t)] });
+  const H2 = t => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [run(t)] });
+  const B = children => new Paragraph({ numbering: { reference: 'dots', level: 0 }, spacing: { after: 60, line: 300 }, children });
+  const N = children => new Paragraph({ numbering: { reference: 'nums', level: 0 }, spacing: { after: 60, line: 300 }, children });
+  const bd = { style: BorderStyle.SINGLE, size: 4, color: RULE };
+  const cell = (content, w, o = {}) => new TableCell({
+    width: { size: w, type: WidthType.DXA }, borders: { top: bd, bottom: bd, left: bd, right: bd },
+    margins: { top: 50, bottom: 50, left: 90, right: 90 },
+    shading: o.fill ? { type: ShadingType.CLEAR, color: 'auto', fill: o.fill } : undefined,
+    children: P(content, { spacing: { after: 0, line: 280 } }, o.run || {})
+  });
+  const table = (widths, head, rows) => new Table({
+    width: { size: W, type: WidthType.DXA }, columnWidths: widths, layout: TableLayoutType.FIXED,
+    rows: [new TableRow({ tableHeader: true, children: head.map((h, i) => cell(h, widths[i], { fill: FILL, run: { bold: true, font: G, size: 19 } })) }),
+      ...rows.map(r => new TableRow({ children: r.map((c, i) => cell(c, widths[i], { run: { size: 19 } })) }))]
+  });
+  const body = [];
+  body.push(para([run('明星学苑教職員組合 書記局　記録', { font: G, size: 18, color: SUB })], { spacing: { after: 40 } }));
+  body.push(para([run(d.title, { font: M, size: 34, bold: true })], { spacing: { after: 160, line: 400 } }));
+  const meta = [['種類', d.mode], ['実施日', d.date], ['参加者・立場', d.participants], ['相手方', d.opponent], ['録音時間', d.duration], ['文字起こし', d.engine], ['分析・指摘', d.analysisBy], ['行った分析', d.scope], ['根拠とした資料', (d.refs || []).join('、')], ['事前資料（添付）', d.files], ['共有', d.share], ['出力', `${s(d.author)}（${s(d.exportedAt)}）`]].filter(r => s(r[1]).trim());
+  body.push(new Table({ width: { size: W, type: WidthType.DXA }, columnWidths: [1900, W - 1900], layout: TableLayoutType.FIXED, rows: meta.map(([k, v]) => new TableRow({ children: [cell(k, 1900, { fill: FILL, run: { bold: true, font: G, size: 19 } }), cell(v, W - 1900, { run: { size: 19 } })] })) }));
+  body.push(para([run('この文書は組合内限りの取扱注意文書です。AIによる自動の文字起こし・分析を含むため、重要な発言は録音で、協約・規程の条文は原文で確かめてください。', { size: 17, color: SHU })], { spacing: { before: 120, after: 200 } }));
+  const a = d.analysis;
+  if (a) {
+    if (a.summary) { body.push(H1('要約')); body.push(...P(a.summary)); }
+    if ((a.agenda || []).length) { body.push(H1('議題・要求項目の状況')); body.push(table([2400, 1150, 4888, 1200], ['議題', '状況', '経過', '時刻'], a.agenda.map(g => [g.topic, g.status, g.detail, g.time]))); }
+    if ((a.issues || []).length) {
+      body.push(H1('妥当性の審査（協約・規程・法令）'));
+      a.issues.forEach((i, k) => {
+        body.push(H2(`${k + 1}. ${s(i.topic)}（${s(i.assessment || '要確認')}${i.confidence ? '・確度' + s(i.confidence) : ''}）`));
+        if (i.vnote) body.push(para([run(i.vnote, { color: SHU, size: 18 })]));
+        if (i.quote || i.statement) body.push(para([run('発言：', { bold: true }), run(i.quote ? `「${i.quote}」${vt(i.qv)} ` : ''), run(s(i.statement)), run(i.time ? `（${i.time}${i.speaker ? ' ' + i.speaker : ''}）` : '', { color: SUB })]));
+        (i.rules || []).forEach(r => body.push(B([run(`${s(r.name)} ${s(r.article)}`, { bold: true }), run(`${vt(r.v)}${r.quote ? `　「${r.quote}」` : ''}`)])));
+        (i.laws || []).forEach(l => body.push(B([run(`${s(l.name)} ${s(l.article)}`, { bold: true }), run(`${vt(l.v)}${l.point ? `　${l.point}` : ''}`)])));
+        if (i.reason) body.push(para([run('理由：', { bold: true }), run(i.reason)]));
+        if (i.policy) body.push(para([run('組合の方針との関係：', { bold: true }), run(i.policy)]));
+      });
+    }
+    if ((a.contradictions || []).length) {
+      body.push(H1('矛盾点'));
+      a.contradictions.forEach(c => {
+        body.push(B([run(s(c.title), { bold: true })]));
+        body.push(para([run(`A　${s(c.a?.time)} ${s(c.a?.speaker)}「${s(c.a?.quote)}」${vt(c.a?.v)}`)], { indent: { left: 420 } }));
+        body.push(para([run(`B　${s(c.b?.time)} ${s(c.b?.speaker)}「${s(c.b?.quote)}」${vt(c.b?.v)}`)], { indent: { left: 420 } }));
+        if (c.explanation) body.push(para([run(c.explanation, { color: SUB })], { indent: { left: 420 } }));
+      });
+    }
+    if ((a.deficiencies || []).length) { body.push(H1('不備（根拠・資料・手続き）')); a.deficiencies.forEach(x => body.push(B([run(s(x.title), { bold: true }), run(`　${s(x.detail)}`), run(x.time ? `（${x.time}${x.speaker ? ' ' + x.speaker : ''}）` : '', { color: SUB })]))); }
+    if ((a.commitments || []).length) { body.push(H1('約束・持ち帰り事項')); body.push(table([1700, 4738, 2000, 1200], ['誰が', '内容', '期限', '時刻'], a.commitments.map(c => [c.who, c.what, c.due, c.time]))); }
+    if ((a.responses || []).length) { body.push(H1('組合としての対応のヒント')); body.push(table([800, 4038, 3400, 1400], ['優先', '対応', '理由・根拠', '時期'], a.responses.map(r => [r.priority, r.action, r.reason, r.when]))); }
+    if ((a.questions || []).length) { body.push(H1('次に確認すべき質問')); a.questions.forEach(q => body.push(N([run(q)]))); }
+    if (a.sharing && (a.sharing.recommendation || a.sharing.reason)) {
+      body.push(H1('共有について（AIの提案）'));
+      body.push(para([run(`${s(a.sharing.recommendation)}（${s(a.sharing.scope_hint)}）`, { bold: true })]));
+      if (a.sharing.reason) body.push(...P(a.sharing.reason));
+      (a.sharing.privacy || []).forEach(p => body.push(B([run(`伏せる情報：${p}`)])));
+    }
+    if (a.member_report) { body.push(H1('組合員への報告（『前進』掲載案）')); body.push(...P(a.member_report)); }
+    if ((a.caveats || []).length) { body.push(H1('注意（聞き取りが不確かな箇所など）')); a.caveats.forEach(c => body.push(B([run(c)]))); }
+  }
+  if ((d.alerts || []).length) {
+    body.push(H1('会議中の指摘メモ'));
+    d.alerts.forEach(x => {
+      body.push(H2(`［${s(x.type)}・${s(x.level)}${x.confidence ? '・確度' + s(x.confidence) : ''}］${s(x.title)}${x.atClock ? `（${x.atClock}）` : ''}${vt(x.vs)}`));
+      if (x.point) body.push(...P(x.point));
+      (x.evidence || []).forEach(e => body.push(B([run(s(e.ref), { bold: true }), run(`${vt(e.v)}${e.quote ? `　「${e.quote}」` : ''}`)])));
+      if (x.say) body.push(para([run('発言の案：', { bold: true }), run(x.say)]));
+    });
+  }
+  if (d.includeTranscript && (d.segments || []).length) {
+    body.push(H1('文字起こし'));
+    if (d.segments.some(x => x.ed)) body.push(para([run('※印は、手で修正した発言です。', { size: 18, color: SUB })]));
+    if (d.segments.some(x => x.fx)) body.push(para([run('補印は、AIが音声認識の聞き違い（用語・人名など）を直した発言です。元の文字は画面で確かめられます。', { size: 18, color: SUB })]));
+    body.push(table([1150, 1750, W - 2900], ['時刻', '話者', '発言'], d.segments.map(x => [x.t, x.name, (x.ed ? '※' : '') + (x.fx ? '補' : '') + x.text])));
+  }
+  return new Document({
+    creator: '書記局 録音処', title: s(d.title), description: '明星学苑教職員組合 書記局 記録',
+    styles: {
+      default: { document: { run: { font: M, size: 21, color: INK } } },
+      paragraphStyles: [
+        { id: 'Heading1', name: 'Heading 1', basedOn: 'Normal', next: 'Normal', quickFormat: true, run: { font: G, size: 26, bold: true, color: INK }, paragraph: { spacing: { before: 360, after: 120 }, keepNext: true, outlineLevel: 0 } },
+        { id: 'Heading2', name: 'Heading 2', basedOn: 'Normal', next: 'Normal', quickFormat: true, run: { font: G, size: 22, bold: true, color: INK }, paragraph: { spacing: { before: 220, after: 80 }, keepNext: true, outlineLevel: 1 } }
+      ]
+    },
+    numbering: { config: [
+      { reference: 'dots', levels: [{ level: 0, format: LevelFormat.BULLET, text: '・', alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 420, hanging: 300 } } } }] },
+      { reference: 'nums', levels: [{ level: 0, format: LevelFormat.DECIMAL, text: '%1.', alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 420, hanging: 360 } } } }] }
+    ] },
+    sections: [{
+      properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1134, bottom: 1134, left: 1134, right: 1134, header: 600, footer: 600 } } },
+      headers: { default: new Header({ children: [new Paragraph({ children: [run('明星学苑教職員組合 書記局', { size: 16, color: SUB, font: G }), new TextRun({ children: [new PositionalTab({ alignment: PositionalTabAlignment.RIGHT, relativeTo: PositionalTabRelativeTo.MARGIN, leader: PositionalTabLeader.NONE }), '組合内限り（取扱注意）'], size: 16, color: SHU, bold: true, font: G })] })] }) },
+      footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ children: ['- ', PageNumber.CURRENT, ' -'], size: 16, color: SUB })] })] }) },
+      children: body
+    }]
+  });
+}
+/*DOCX-END*/
+
+/* ---------- 保存・記録一覧・利用ログ ---------- */
+async function saveRecord() {
+  const share = ($('input[name=share]:checked') || {}).value || 'none';
+  S.rec.share = share;
+  if (share === 'none') return Dlg.alert('「共有しない」を選んでいます', '本文はサーバーに保存しません。「Wordで保存」で手元に保存してください。共有するときは、範囲を選んでから「記録を保存する」を押してください。');
+  readMeta();
+  const btn = $('#btn-save'); btn.disabled = true;
+  try {
+    const rec = JSON.parse(JSON.stringify(S.rec)); delete rec.liveBackup;
+    rec.mode = modeKey(rec.mode); rec.ctxFiles = (rec.ctxFiles || []).filter(f => f.on !== false);
+    rec.segments.forEach(g => { delete g.fxd; });
+    if (rec.analysis) { delete rec.analysis._loading; delete rec.analysis._err; }
+    const r = await api('saveRecord', { record: rec, share }, { timeoutMs: 120000 });
+    S.rec.serverId = r.id; S.dirty = false; persist();
+    toast(`保存しました（${SHARE[share]}）。`);
+  } catch (e) { toast(e.message, 'err'); }
+  finally { btn.disabled = false; }
+}
+async function loadRecords() {
+  const box = $('#records'); box.innerHTML = '<p class="muted">読み込んでいます…</p>';
+  try {
+    const r = await api('listRecords');
+    box.innerHTML = r.records.length ? `<div class="tbl-wrap"><table class="tbl"><tr><th>件名</th><th>種類</th><th>実施日</th><th>作成</th><th>共有</th><th></th></tr>${r.records.map(x => `<tr><td><b>${esc(x.title || '（件名なし）')}</b>${x.summary ? `<br><small class="muted">${esc(x.summary.slice(0, 90))}…</small>` : ''}</td><td class="nowrap">${esc(x.mode)}</td><td class="nowrap">${esc(x.date)}</td><td class="nowrap">${esc(x.owner)}</td><td class="nowrap">${esc(SHARE[x.share] || x.share)}</td><td class="nowrap"><button type="button" class="btn ghost sm" data-open="${esc(x.id)}">開く</button>${x.canDelete ? ` <button type="button" class="btn ghost sm" data-del="${esc(x.id)}">削除</button>` : ''}</td></tr>`).join('')}</table></div>` : '<p class="muted">まだ記録はありません。</p>';
+  } catch (e) { box.innerHTML = `<p class="err">${esc(e.message)}</p>`; }
+}
+async function openRecord(id) {
+  if (Live.active || Viewer.code) return toast('録音中・同期中は開けません。');
+  if (S.rec.segments.length && S.dirty && !(await Dlg.confirm('いまの記録を閉じますか？', '保存していない内容は失われます。', '閉じて開く'))) return;
+  try {
+    const r = await api('getRecord', { id });
+    resetWork(true);
+    S.rec = Object.assign(newRec(), r.record, { lid: uid(), serverId: r.record.serverId });
+    S.rec.mode = modeKey(S.rec.mode); S.rec.ctxFiles = (S.rec.ctxFiles || []).map(f => Object.assign({ on: true }, f));
+    S.phase = 'done'; S.dirty = false;
+    fillMeta(); go('work'); openSheet();
+    const radio = $(`input[name=share][value="${S.rec.share}"]`); if (radio) radio.checked = true;
+    toast('記録を開きました。');
+  } catch (e) { toast(e.message, 'err'); }
+}
+async function deleteRecord(id) {
+  if (!(await Dlg.confirm('この記録を削除しますか？', '削除すると元に戻せません（ドライブのファイルはごみ箱に移ります）。', '削除する'))) return;
+  try { await api('deleteRecord', { id }); toast('削除しました。'); loadRecords(); } catch (e) { toast(e.message, 'err'); }
+}
+let LOGS = [];
+async function loadLogs() {
+  try {
+    const r = await api('getLogs', { days: +$('#log-days').value });
+    LOGS = r.rows || [];
+    const by = {};
+    LOGS.forEach(x => { if (!x.name || x.name === '（不明）') return; const b = by[x.name] = by[x.name] || { n: 0, last: 0 }; b.n++; b.last = Math.max(b.last, x.at); });
+    $('#log-sum').innerHTML = Object.entries(by).sort((a, b) => b[1].last - a[1].last).map(([n, b]) => `<div class="who-card"><b>${esc(n)}</b><span>${b.n}件</span><span class="muted">最終 ${fmtDate(b.last)}</span></div>`).join('') || '<p class="muted">この期間の利用はありません。</p>';
+    $('#log-tbl').innerHTML = '<tr><th>日時</th><th>氏名</th><th>操作</th><th>種類</th><th>件名</th><th>分</th><th>共有</th><th>端末</th><th>詳細</th></tr>' +
+      LOGS.map(x => `<tr class="${/失敗|拒否/.test(x.op) ? 'warnrow' : ''}"><td class="nowrap">${fmtDate(x.at)}</td><td class="nowrap">${esc(x.name)}</td><td>${esc(x.op)}</td><td>${esc(x.mode)}</td><td>${esc(x.title)}</td><td>${esc(x.minutes)}</td><td>${esc(x.share)}</td><td>${esc(x.device)}</td><td>${esc(x.detail)}</td></tr>`).join('');
+  } catch (e) { toast(e.message, 'err'); }
+}
+function logsCSV() {
+  const head = ['日時', '氏名', '権限', '操作', '種類', '件名', '時間（分）', '共有', '端末', '詳細'];
+  const rows = LOGS.map(x => [new Date(x.at).toLocaleString('ja-JP'), x.name, x.role, x.op, x.mode, x.title, x.minutes, x.share, x.device, x.detail]);
+  const csv = '\ufeff' + [head, ...rows].map(r => r.map(v => `"${String(v ?? '').replace(/"/g, '""')}"`).join(',')).join('\r\n');
+  download(new Blob([csv], { type: 'text/csv' }), `利用ログ_${today()}.csv`);
+}
+
+/* ---------- 画面の切り替え ---------- */
+function go(view) {
+  S.view = view;
+  ['work', 'records', 'lib', 'join', 'logs', 'help'].forEach(v => { $('#p-' + v).hidden = v !== view; });
+  if (view === 'records') loadRecords();
+  if (view === 'lib') Lib.load();
+  if (view === 'join') Share.refresh();
+  if (view === 'logs') loadLogs();
+  updateUI();
+}
+function openSheet() { S.editMeta = false; renderSpkToggle(); renderLines(); renderAlerts(); renderAnalysis(); updateUI(); scrollTo(0, 0); }
+function resetWork(force) {
+  if (Live.active) return false;
+  if (Viewer.code) Viewer.end(false);
+  S.rec = newRec(); S.audio = null; S.phase = 'setup'; S.colorMap = {}; S.interim = ''; S.dirty = false; S.curSpk = '';
+  Check.lastIdx = 0; Check.count = 0; Check.dropped = 0; Fixer.reset(); FileFlow.file = null; S.partsTouched = false;
+  $('#interim').textContent = ''; $('#opt-reclean').checked = false; renderDropped();
+  const none = $('input[name=share][value=none]'); if (none) none.checked = true;
+  sessionStorage.removeItem('rk_work');
+  fillMeta(); renderLines(); renderAlerts(); renderAnalysis(); applyPartDefaults(); progress(null); updateUI();
+  return true;
+}
+function updateUI() {
+  const ph = S.phase, r = S.rec, live = Live.active, hasMode = !!r.mode;
+  $('#src-live').disabled = !hasMode; $('#file-in').disabled = !hasMode; $('#src-file-l').classList.toggle('dis', !hasMode); $('#mode-hint').hidden = hasMode;
+  const sheet = ph !== 'setup';
+  $('#setup').hidden = sheet && !S.editMeta; $('#setup').classList.toggle('meta-only', sheet);
+  $('#sheet').hidden = !sheet;
+  $('#btn-edit-meta').textContent = S.editMeta ? '情報を閉じる' : '情報を編集';
+  $('#livebar').hidden = !(r.source === 'live' && (ph === 'ready' || ph === 'recording'));
+  $('#viewbar').hidden = ph !== 'viewer';
+  $('#filebar').hidden = ph !== 'file';
+  $('#btn-rec').classList.toggle('on', live && !Live.paused);
+  $('#rec-lbl').textContent = live ? (Live.paused ? '一時停止中（押すと再開）' : '録音中') : '録音開始';
+  $('#btn-pause').hidden = !live; $('#btn-pause').textContent = Live.paused ? '再開' : '一時停止';
+  $('#btn-stop').hidden = !live; $('#btn-stop').disabled = Live.ending;
+  $('#opt-engine').disabled = live; $('#opt-tmode').disabled = live;
+  const done = ph === 'done';
+  $('#finishbar').hidden = !(done && r.segments.length);
+  $('#reclean-l').hidden = !(r.source === 'live' && S.audio && S.audio.segments.length);
+  const fp = chosenParts('#finishbar'), fb = ranFlags(r.analysis);
+  $('#btn-analyze').textContent = !fp.length ? '作る分析を選んでください' : fp.every(p => fb[p]) && r.analysis ? '選んだ分析をやり直す' : '選んだ分析を行う';
+  $('#btn-analyze').disabled = S.busy || !fp.length;
+  const rp = chosenParts('#filebar');
+  $('#btn-run').textContent = rp.length ? `文字起こしを始める（＋${partsLabel(rp)}）` : '文字起こしだけ行う';
+  $('#btn-run').disabled = S.busy;
+  $('#savebox').hidden = !(done && (r.segments.length || r.analysis));
+  $('#btn-audio').hidden = !(r.source === 'live' && S.audio && S.audio.segments.length && !live);
+  $('#btn-check').disabled = Check.running || !r.segments.length;
+  $('#sh-meta').textContent = [r.date, r.durationSec ? '録音 ' + fmtT(r.durationSec) : '', r.serverId ? '保存済み' : ''].filter(Boolean).join('　');
+  $$('.tab').forEach(t => t.classList.toggle('on', t.dataset.go === S.view));
+  const exec = !!(S.user && ['執行委員', '書記局'].includes(S.user.role));
+  $$('.exec').forEach(e => { e.hidden = !exec; });
+}
+function showLogin(msg) {
+  $('#v-main').hidden = true; $('#v-config').hidden = true; $('#v-login').hidden = false;
+  $('#login-err').textContent = msg || ''; $('#code').value = ''; setTimeout(() => $('#code').focus(), 50);
+}
+async function enterApp() {
+  const r = await api('bootstrap');
+  S.user = r.user; S.refs = r.refs || []; S.paid = r.paid !== false;
+  S.provider = r.provider || 'claude'; S.laws = r.laws || null; S.scopes = r.scopes || [];
+  initScopes(); applyPrefs();
+  $('#who').textContent = `${S.user.name}（${S.user.role}）`;
+  $('#paid-warn').hidden = S.paid;
+  $('#v-login').hidden = true; $('#v-config').hidden = true; $('#v-main').hidden = false;
+  if (S.phase === 'setup' && !S.rec.segments.length) {
+    try {
+      const w = JSON.parse(sessionStorage.getItem('rk_work') || 'null');
+      if (w && w.user === S.user.name && w.rec && (w.rec.segments?.length || w.rec.analysis)) { S.rec = Object.assign(newRec(), w.rec); S.phase = 'done'; toast('作業中の記録を元に戻しました。'); }
+    } catch (e) { /* 復元しない */ }
+  }
+  fillMeta(); go('work');
+  if (S.phase !== 'setup') openSheet();
+  Share.start();
+}
+
+/* ---------- 操作の結びつけ ---------- */
+function bind() {
+  $$('.notice-list').forEach(ol => { ol.innerHTML = NOTICE.map(n => `<li>${esc(n)}</li>`).join(''); });
+  renderModes();
+  $('#login-form').addEventListener('submit', async ev => {
+    ev.preventDefault();
+    if (!$('#agree').checked) { $('#login-err').textContent = '注意事項を読んで、チェックを入れてください。'; return; }
+    const btn = $('#btn-login'); btn.disabled = true; $('#login-err').textContent = '';
+    try {
+      const user = await Auth.login($('#code').value);
+      if (Auth.lockedUser && Auth.lockedUser !== user.name) resetWork(true);
+      Auth.lockedUser = null;
+      await enterApp();
+    } catch (e) { $('#login-err').textContent = e.message; }
+    finally { btn.disabled = false; }
+  });
+  $$('.tab').forEach(t => t.addEventListener('click', () => go(t.dataset.go)));
+  $('#btn-logout').addEventListener('click', async () => {
+    if (Live.active) return toast('録音を終えてからログアウトしてください。');
+    if (S.dirty && S.rec.segments.length && !(await Dlg.confirm('ログアウトしますか？', 'Wordで保存していない内容は、この端末から消えます。', 'ログアウト'))) return;
+    Auth.logout();
+  });
+  $('#modes').addEventListener('change', e => { if (e.target.name === 'mode') setMode(e.target.value); });
+  $('#sh-mode').addEventListener('change', e => setMode(e.target.value));
+  ['#f-title', '#f-date', '#f-opponent', '#f-participants', '#f-context', '#f-vocab'].forEach(id => $(id).addEventListener('input', () => { readMeta(); if (id === '#f-title') $('#sh-title').value = S.rec.title; markDirty(); }));
+  $('#f-spk').addEventListener('change', () => { readMeta(); renderSpkToggle(); markDirty(); });
+  $('#refs').addEventListener('change', () => { readMeta(); markDirty(); });
+  $('#sh-title').addEventListener('input', e => { S.rec.title = e.target.value; $('#f-title').value = e.target.value; markDirty(); });
+  $('#src-live').addEventListener('click', () => { readMeta(); S.rec.source = 'live'; S.phase = 'ready'; openSheet(); });
+  $('#file-in').addEventListener('change', e => { const f = e.target.files[0]; e.target.value = ''; if (f) { readMeta(); FileFlow.pick(f); } });
+  $('#btn-run').addEventListener('click', () => FileFlow.run());
+  $('#btn-rec').addEventListener('click', () => { if (!Live.active) Live.start(); else if (Live.paused) Live.resume(); });
+  $('#btn-pause').addEventListener('click', () => Live.paused ? Live.resume() : Live.pause());
+  $('#btn-stop').addEventListener('click', async () => { if (await Dlg.confirm('録音を終えますか？', '終えたあと、清書し直しや分析ができます。', '録音を終える')) Live.stop(); });
+  $('#spk-toggle').addEventListener('click', e => { const b = e.target.closest('[data-spk]'); if (!b) return; S.curSpk = b.dataset.spk; renderSpkToggle(); });
+  document.addEventListener('keydown', e => {
+    if (!/^[1-8]$/.test(e.key) || e.ctrlKey || e.metaKey || e.altKey || !(S.phase === 'ready' || S.phase === 'recording')) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || document.activeElement.isContentEditable) return;
+    const n = S.rec.spkBtns[+e.key - 1]; if (n) { S.curSpk = n; renderSpkToggle(); }
+  });
+  $('#opt-sync').addEventListener('change', e => { Share.syncOpt(); if (e.target.checked && Live.active && !Sync.code) Sync.open(); });
+  $('#lines').addEventListener('click', async e => {
+    const li = e.target.closest('li[data-i]'); if (!li) return;
+    const i = +li.dataset.i, seg = S.rec.segments[i], act = e.target.closest('[data-a]')?.dataset.a;
+    if (!seg || !act) return;
+    if (act === 'verify') return Check.run({ focus: i });
+    if (act === 'unfix') return Fixer.undo(i);
+    if (act === 'spk') {
+      if (/^S\d+:/.test(seg.spk) || !S.rec.spkBtns.length) return openSpeakers();
+      const b = S.rec.spkBtns; seg.spk = b[(b.indexOf(seg.spk) + 1) % b.length]; updateLine(i); Sync.mark(i); markDirty(); return;
+    }
+    if (act === 'edit') {
+      const tx = li.querySelector('.tx'); if (tx.isContentEditable) return;
+      tx.textContent = seg.text; tx.contentEditable = 'true'; tx.focus();
+      const done = keep => { tx.contentEditable = 'false'; const v = tx.textContent.trim(); if (keep && v && v !== seg.text) { seg.text = v; seg.ed = true; Sync.mark(i); markDirty(); } updateLine(i); };
+      tx.onkeydown = ev => { if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); tx.blur(); } if (ev.key === 'Escape') { tx.onblur = null; done(false); } };
+      tx.onblur = () => done(true);
+    }
+  });
+  $('#record').addEventListener('scroll', () => { const b = $('#record'); if (b.scrollTop + b.clientHeight >= b.scrollHeight - 90) $('#btn-latest').hidden = true; }, { passive: true });
+  $('#btn-latest').addEventListener('click', () => { const b = $('#record'); b.scrollTop = b.scrollHeight; $('#btn-latest').hidden = true; });
+  $('#alerts').addEventListener('click', e => {
+    const ref = e.target.closest('[data-t]'); if (ref) return jumpTo(+ref.dataset.t);
+    const card = e.target.closest('.fusen'); const act = e.target.closest('[data-a]')?.dataset.a; if (!card || !act) return;
+    const a = S.rec.alerts.find(x => x.id === card.dataset.id); if (!a) return;
+    if (act === 'close') a.closed = true;
+    if (act === 'pin') a.pin = !a.pin;
+    if (act === 'copy') return copyText(a.say || '');
+    renderAlerts(); markDirty();
+  });
+  $('#btn-check').addEventListener('click', () => Check.run());
+  $('#fab').addEventListener('click', () => $('#margin').classList.toggle('open'));
+  $('#btn-margin-close').addEventListener('click', () => $('#margin').classList.remove('open'));
+  $('#btn-analyze').addEventListener('click', () => finish());
+  $('#analysis').addEventListener('click', e => {
+    const t = e.target.closest('[data-t]'); if (t) return jumpTo(+t.dataset.t);
+    const rp = e.target.closest('[data-retry]'); if (rp) return retryPart(rp.dataset.retry);
+    const q = e.target.closest('[data-copyq]'); if (q) return copyText((S.rec.analysis.questions || [])[+q.dataset.copyq] || '');
+    if (e.target.closest('[data-copyreport]')) return copyText($('#report').value);
+  });
+  $('#analysis').addEventListener('input', e => { if (e.target.id === 'report' && S.rec.analysis) { S.rec.analysis.member_report = e.target.value; markDirty(); } });
+  $$('input[name=share]').forEach(r => r.addEventListener('change', () => { S.rec.share = r.value; markDirty(); }));
+  $('#btn-word').addEventListener('click', exportWord);
+  $('#btn-audio').addEventListener('click', downloadAudio);
+  $('#btn-save').addEventListener('click', saveRecord);
+  $('#btn-new').addEventListener('click', async () => {
+    if (Live.active) return toast('録音を終えてからにしてください。');
+    if (S.dirty && (S.rec.segments.length || S.rec.analysis) && !(await Dlg.confirm('新しい記録を始めますか？', 'Wordで保存していない内容は、この端末から消えます。', '新しく始める'))) return;
+    resetWork(true); scrollTo(0, 0);
+  });
+  $('#btn-edit-meta').addEventListener('click', () => { if (S.editMeta) readMeta(); S.editMeta = !S.editMeta; updateUI(); });
+  $('#btn-speakers').addEventListener('click', openSpeakers);
+  $('#records').addEventListener('click', e => { const o = e.target.closest('[data-open]'); if (o) return openRecord(o.dataset.open); const d = e.target.closest('[data-del]'); if (d) deleteRecord(d.dataset.del); });
+  $('#join-form').addEventListener('submit', e => { e.preventDefault(); Viewer.join($('#join-code').value); });
+  $('#btn-view-stop').addEventListener('click', () => Viewer.end(false));
+  $('#btn-logs').addEventListener('click', loadLogs);
+  $('#log-days').addEventListener('change', loadLogs);
+  $('#btn-logs-csv').addEventListener('click', logsCSV);
+  bind3();
+  addEventListener('beforeunload', e => { if (Live.active || (S.dirty && S.rec.segments.length)) { e.preventDefault(); e.returnValue = ''; } });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && Live.active) Live.wakeOn(); });
+  let idle = Date.now();
+  ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(ev => addEventListener(ev, () => { idle = Date.now(); }, { passive: true }));
+  setInterval(() => {
+    if (!S.user) return;
+    if (Live.active || S.busy || Viewer.code) { idle = Date.now(); return; }
+    if (Date.now() - idle > CONFIG.IDLE_LOCK_MIN * 60000) { Auth.lockedUser = S.user.name; persist(); Auth.logout({ locked: true, keepWork: true, msg: `${CONFIG.IDLE_LOCK_MIN}分操作がなかったため、ロックしました。もう一度コードを入れてください。` }); }
+  }, 30000);
+}
+/* =========================================================
+   追加機能（v1.1.0）：作る分析の選択・事前資料の取り込み・用語の補正・共有・資料庫
+   ========================================================= */
+
+/* ---------- 作る分析（要約／規則・法令のチェック／対応のヒント）の選択 ---------- */
+function chosenParts(sel) {
+  const root = $(sel); if (!root) return [];
+  const on = new Set($$('input[data-p]:checked', root).map(i => i.dataset.p));
+  return PART_ORDER.filter(p => on.has(p));
+}
+function partsLabel(parts) {
+  const nm = { summary: '要約', review: '審査', response: '対応' };
+  return parts && parts.length ? parts.map(p => nm[p]).join('・') : '文字起こしのみ';
+}
+function setPicks(parts) { $$('.pick input[data-p]').forEach(i => { i.checked = parts.includes(i.dataset.p); }); }
+/* 種類ごとの初期値：対外会議はすべて、会話・組合内会議は要約だけ（あとから変えられます） */
+function applyPartDefaults() {
+  if (S.partsTouched) return;
+  setPicks(modeKey(S.rec.mode) === 'external' ? PART_ORDER : ['summary']);
+}
+function analysisScope() {
+  const a = S.rec.analysis; if (!a) return '文字起こしのみ';
+  const r = ranFlags(a), ps = PART_ORDER.filter(p => r[p]);
+  return ps.length ? ps.map(p => PART_NAME[p]).join('・') : '文字起こしのみ';
+}
+function onPick(e) {
+  const i = e.target.closest('input[data-p]'); if (!i) return;
+  S.partsTouched = true;
+  const ran = ranFlags(S.rec.analysis);
+  const set = (p, v) => $$(`.pick input[data-p="${p}"]`).forEach(x => { x.checked = v; });
+  if (i.dataset.p === 'response' && i.checked) ['summary', 'review'].forEach(p => { if (!ran[p]) set(p, true); });
+  if (i.dataset.p !== 'response' && !i.checked && !ran[i.dataset.p]) set('response', false);
+  set(i.dataset.p, i.checked);
+  updateUI();
+}
+
+/* ---------- 事前資料のファイル（Word・PDF・テキスト）を読み取る ---------- */
+function decodeText(buf) {
+  const u = new Uint8Array(buf);
+  if (u[0] === 0xEF && u[1] === 0xBB && u[2] === 0xBF) return new TextDecoder('utf-8').decode(u.subarray(3));
+  if (u[0] === 0xFF && u[1] === 0xFE) return new TextDecoder('utf-16le').decode(u.subarray(2));
+  if (u[0] === 0xFE && u[1] === 0xFF) return new TextDecoder('utf-16be').decode(u.subarray(2));
+  try { return new TextDecoder('utf-8', { fatal: true }).decode(u); } catch (e) { return new TextDecoder('shift_jis').decode(u); }
+}
+function normalizeDocText(t) {
+  return String(t || '').replace(/\u0000/g, '').replace(/\r\n?/g, '\n').replace(/[ \t　]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+let pdfWorkerReady = false;
+async function pdfText(file) {
+  const lib = await loadLib('pdfjs');
+  if (!pdfWorkerReady) {
+    const W = CONFIG.PDF_WORKER;
+    let res;
+    try { res = await fetch(W.src, { integrity: W.sri, mode: 'cors', credentials: 'omit' }); } catch (e) { throw new AppError('PDFを読み取る部品を読み込めませんでした。ネットワークを確認してください。'); }
+    if (!res.ok) throw new AppError('PDFを読み取る部品を読み込めませんでした。');
+    lib.GlobalWorkerOptions.workerSrc = URL.createObjectURL(new Blob([await res.arrayBuffer()], { type: 'text/javascript' }));
+    pdfWorkerReady = true;
+  }
+  const doc = await lib.getDocument({ data: new Uint8Array(await file.arrayBuffer()), cMapUrl: CONFIG.PDF_CMAP, cMapPacked: true, standardFontDataUrl: CONFIG.PDF_CMAP.replace('/cmaps/', '/standard_fonts/'), isEvalSupported: false }).promise;
+  const n = Math.min(doc.numPages, CONFIG.LIMITS.PAGES), pages = [];
+  try {
+    for (let p = 1; p <= n; p++) {
+      const page = await doc.getPage(p), tc = await page.getTextContent();
+      let line = ''; tc.items.forEach(it => { line += it.str; if (it.hasEOL) line += '\n'; });
+      pages.push(line); page.cleanup();
+      if (p % 8 === 0) await sleep(0);
+    }
+  } finally { doc.destroy(); }
+  const text = pages.join('\n\n');
+  let note = doc.numPages > n ? `先頭の${n}ページだけ読み取りました（全${doc.numPages}ページ）。` : '';
+  if (text.replace(/\s/g, '').length < n * 20) note += ' ほとんど文字を取り出せませんでした。スキャンした画像のPDFは読み取れません。Wordやテキストにしてから入れてください。';
+  return { text, note: note.trim() };
+}
+async function readDoc(file) {
+  const L = CONFIG.LIMITS, name = file.name, ext = (name.split('.').pop() || '').toLowerCase();
+  if (file.size > L.FILE_MB * 1048576) throw new AppError(`${name}：大きすぎます（${L.FILE_MB}MBまで）。`);
+  let text = '', note = '';
+  if (['txt', 'md', 'csv', 'tsv', 'text'].includes(ext) || /^text\//.test(file.type)) text = decodeText(await file.arrayBuffer());
+  else if (ext === 'docx') { const m = await loadLib('mammoth'); text = (await m.extractRawText({ arrayBuffer: await file.arrayBuffer() })).value; }
+  else if (ext === 'pdf') ({ text, note } = await pdfText(file));
+  else if (['doc', 'xls', 'xlsx', 'ppt', 'pptx', 'rtf', 'odt', 'pages'].includes(ext)) throw new AppError(`${name}：この形式は読み取れません。Word（.docx）・PDF・テキストで保存し直してください。`);
+  else throw new AppError(`${name}：読み取れない形式です。Word（.docx）・PDF・テキスト（.txt .md .csv）に対応しています。`);
+  text = normalizeDocText(text);
+  if (!text) throw new AppError(`${name}：文字を取り出せませんでした。${ext === 'pdf' ? 'スキャンした画像のPDFは読み取れません。' : ''}`);
+  return { name, text, note };
+}
+function ctxTotal() {
+  const r = S.rec;
+  return (r.context || '').length + (r.ctxFiles || []).filter(f => f.on !== false).reduce((n, f) => n + f.text.length, 0);
+}
+function renderCtxFiles() {
+  const box = $('#ctx-files'), fs = S.rec.ctxFiles || [];
+  box.innerHTML = fs.map((f, i) => `<li class="ctxf"><label><input type="checkbox" data-i="${i}"${f.on !== false ? ' checked' : ''}> <b>${esc(f.name)}</b></label><small class="muted">${f.chars.toLocaleString()}字${f.text.length < f.chars ? `（先頭${f.text.length.toLocaleString()}字を使います）` : ''}</small>${f.note ? `<small class="warn">${esc(f.note)}</small>` : ''}<span class="grow"></span><button type="button" class="btn ghost sm" data-prev="${i}">中身</button><button type="button" class="btn ghost sm" data-rm="${i}">外す</button></li>`).join('');
+  updateCtxTotal();
+}
+function updateCtxTotal() {
+  const n = ctxTotal(), over = n > CONFIG.LIMITS.TOTAL_CHARS;
+  const el = $('#ctx-total'); el.textContent = `事前資料の合計 ${n.toLocaleString()}字（上限 ${CONFIG.LIMITS.TOTAL_CHARS.toLocaleString()}字）`; el.classList.toggle('warn', over);
+  $('#policy-count').textContent = (S.rec.policy || '').length.toLocaleString();
+}
+async function addCtxFiles(files) {
+  const L = CONFIG.LIMITS, list = [...files];
+  for (const file of list) {
+    if ((S.rec.ctxFiles || []).length >= 12) { toast('添付できるのは12ファイルまでです。', 'err'); break; }
+    try {
+      toast(`${file.name} を読み取っています…`);
+      const d = await readDoc(file);
+      const room = L.TOTAL_CHARS - ctxTotal();
+      if (room <= 0) { toast('事前資料の合計が上限に達しています。不要な資料を外してください。', 'err'); break; }
+      const text = d.text.slice(0, Math.min(L.FILE_CHARS, room));
+      let note = d.note;
+      if (text.length < d.text.length) note = (note + ` 長いため先頭${text.length.toLocaleString()}字だけを使います。`).trim();
+      S.rec.ctxFiles.push({ name: d.name, chars: d.text.length, text, note, on: true });
+      renderCtxFiles(); markDirty();
+      toast(`${d.name} を取り込みました（${d.text.length.toLocaleString()}字）。` + (note ? ' ' + note : ''), note ? 'err' : '');
+    } catch (e) { toast(e.message || String(e), 'err'); }
+  }
+}
+function previewCtx(i) {
+  const f = S.rec.ctxFiles[i]; if (!f) return;
+  Dlg.open(f.name, `<p class="muted small">AIに渡す文字の先頭部分です（${f.text.length.toLocaleString()}字）。表や図は、文字だけが取り出されます。</p><pre class="prev">${esc(f.text.slice(0, 4000))}${f.text.length > 4000 ? '\n…（以下略）' : ''}</pre>`, [{ label: '閉じる', value: true, kind: 'primary' }]);
+}
+
+/* ---------- 用語の聞き違いをAIで直す ---------- */
+function editDistLimited(a, b, limit) {
+  if (Math.abs(a.length - b.length) > limit) return limit + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i]; let min = i;
+    for (let j = 1; j <= b.length; j++) { const v = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); cur.push(v); if (v < min) min = v; }
+    if (min > limit) return limit + 1;
+    prev = cur;
+  }
+  return prev[b.length];
+}
+const Fixer = {
+  running: false, lastAt: 0, fixed: 0, logged: 0,
+  reset() { this.fixed = 0; this.logged = 0; this.lastAt = 0; },
+  enabled() { const el = $('#opt-fix'); return !!(el && el.checked); },
+  pending(live) {
+    const lim = live && Live.active ? Live.sec() - 10 : Infinity;
+    return S.rec.segments.map((s, i) => ({ s, i })).filter(x => !x.s.fxd && !x.s.fx && !x.s.ed && !x.s.gap && x.s.text.length >= 6 && x.s.text.length <= 700 && x.s.t < lim);
+  },
+  async batch(items) {
+    const sent = items.map(x => ({ s: x.s, text: x.s.text, i: x.i }));
+    const r = await api('correct', { lines: sent.map(x => ({ i: x.i, text: x.text })), vocab: vocabAll(150), participants: S.rec.participants, title: S.rec.title }, { timeoutMs: 100000 });
+    const byI = {}; (r.fixes || []).forEach(f => { byI[f.i] = f; });
+    let n = 0;
+    sent.forEach(x => {
+      x.s.fxd = true;
+      const f = byI[x.i]; if (!f) return;
+      const idx = S.rec.segments.indexOf(x.s);
+      if (idx < 0 || x.s.ed || x.s.text !== x.text || $(`#lines li[data-i="${idx}"] .tx[contenteditable=true]`)) return;
+      const limit = Math.max(6, Math.floor(x.text.length * 0.25));
+      if (!f.text || f.text === x.text || editDistLimited(x.text, f.text, limit) > limit) return;
+      x.s.fx = { raw: x.text }; x.s.text = f.text; n++;
+      Sync.mark(idx); updateLine(idx);
+    });
+    this.fixed += n; if (n) markDirty();
+    return n;
+  },
+  async run() {
+    if (this.running) return 0;
+    this.running = true;
+    try { const p = this.pending(true).slice(0, 60); this.lastAt = Date.now(); return p.length ? await this.batch(p) : 0; }
+    catch (e) { return 0; } finally { this.running = false; }
+  },
+  tick() {
+    if (!this.enabled() || this.running || !Live.active || Live.paused) return;
+    const now = Date.now();
+    if (now - this.lastAt < 45000 || now - Check.lastSegAt < 6000) return;
+    if (this.pending(true).length >= 4) this.run();
+  },
+  async final() {
+    for (let k = 0; k < 3; k++) {
+      const p = this.pending(false).slice(0, 60); if (!p.length) break;
+      try { await this.batch(p); } catch (e) { break; }
+    }
+  },
+  async all(onP) {
+    const list = this.pending(false).slice(0, 1500); let done = 0;
+    for (let k = 0; k < list.length; k += 120) {
+      const grp = [list.slice(k, k + 60), list.slice(k + 60, k + 120)].filter(g => g.length);
+      await Promise.all(grp.map(g => this.batch(g).catch(() => 0)));
+      done += 120; if (onP) onP(Math.min(1, done / list.length));
+    }
+    this.flushLog();
+  },
+  undo(i) {
+    const s = S.rec.segments[i]; if (!s || !s.fx) return;
+    s.text = s.fx.raw; delete s.fx; s.fxd = true; Sync.mark(i); updateLine(i); markDirty();
+  },
+  flushLog() {
+    if (this.fixed > this.logged) { api('log', { op: 'correct_done', mode: S.rec.mode, detail: `${this.fixed - this.logged}行` }).catch(() => {}); this.logged = this.fixed; }
+  }
+};
+
+/* ---------- 個人の設定（この端末だけ。共有の「する／しない」は覚えません） ---------- */
+function applyPrefs() {
+  try {
+    const p = JSON.parse(localStorage.getItem('rk_pref') || '{}');
+    const has = (sel, v) => [...$(sel).options].some(o => o.value === v);
+    if (p.scope && has('#opt-scope', p.scope)) $('#opt-scope').value = p.scope;
+    if (p.auto != null && has('#opt-auto', String(p.auto))) $('#opt-auto').value = String(p.auto);
+    if (p.fix === false) $('#opt-fix').checked = false;
+  } catch (e) { /* 保存できない環境では初期値のまま */ }
+}
+function savePrefs() {
+  try { localStorage.setItem('rk_pref', JSON.stringify({ scope: $('#opt-scope').value, auto: $('#opt-auto').value, fix: $('#opt-fix').checked })); } catch (e) { /* 保存できない環境 */ }
+}
+
+/* ---------- 共有（リンク・QRコード・いま共有中の一覧・自動参加） ---------- */
+function scopeLabel(id) { const s = (S.scopes || []).find(x => x.id === id); return s ? s.label : (id || ''); }
+function initScopes() {
+  const sel = $('#opt-scope'), cur = sel.value;
+  const list = S.scopes && S.scopes.length ? S.scopes : [{ id: 'exec', label: '執行委員以上' }];
+  sel.innerHTML = list.map(s => `<option value="${esc(s.id)}">${esc(s.label)}</option>`).join('');
+  sel.value = [...sel.options].some(o => o.value === cur) ? cur : 'exec';
+}
+function fmtAgo(ms) {
+  const m = Math.max(0, Math.round((Date.now() - ms) / 60000));
+  return m < 1 ? 'いま' : m < 60 ? `${m}分前` : `${Math.floor(m / 60)}時間前`;
+}
+async function renderQR(el, text) {
+  el.innerHTML = '';
+  try {
+    const q = await loadLib('qr'), qr = q(0, 'M');
+    qr.addData(text); qr.make();
+    el.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+    const svg = el.querySelector('svg'); if (svg) { svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', '参加用のQRコード'); }
+  } catch (e) { el.innerHTML = '<small class="muted">QRコードを作れませんでした。コードかリンクを使ってください。</small>'; }
+}
+const Share = {
+  list: [], timer: 0, pending: null,
+  fromHash() {
+    const m = /[#&]j=([A-Za-z0-9]{6})(?![A-Za-z0-9])/.exec(location.hash);
+    if (!m) return false;
+    this.pending = m[1].toUpperCase();
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* 履歴を書き換えられない環境 */ }
+    return true;
+  },
+  link(code) { return location.href.split('#')[0] + '#j=' + code; },
+  syncOpt() { $('#scope-l').hidden = !$('#opt-sync').checked || !!Sync.code; },
+  show(code, label) {
+    const url = this.link(code);
+    $('#sharebox').hidden = false; $('#sh-code-big').textContent = code; $('#sh-scope').textContent = label || '';
+    $('#sh-link').value = url; $('#btn-share-native').hidden = !navigator.share;
+    renderQR($('#qr'), url); this.syncOpt();
+  },
+  hide() { $('#sharebox').hidden = true; $('#qr').innerHTML = ''; },
+  start() {
+    clearInterval(this.timer); this.refresh();
+    this.timer = setInterval(() => { if (document.visibilityState === 'visible' && S.user && !Live.active && !Viewer.code && (S.view === 'work' || S.view === 'join')) this.refresh(); }, CONFIG.LIVE_LIST_MS);
+    this.consumePending();
+  },
+  async refresh() {
+    if (!S.user) return;
+    try { this.list = (await api('liveList', {}, { timeoutMs: 20000 })).sessions || []; } catch (e) { if (e.code === 'AUTH') return; this.list = []; }
+    this.render();
+  },
+  render() {
+    const L = this.list.filter(x => x.code !== Sync.code && x.code !== Viewer.code);
+    const item = x => `<div class="live-item"><span class="live-dot" aria-hidden="true"></span><div><b>${esc(x.title || '（件名なし）')}</b><small>${esc(x.modeLabel)}・${esc(x.owner)}${x.mine ? '（自分）' : ''}・${esc(x.scopeLabel)}・${fmtAgo(x.started)}に開始</small></div><button type="button" class="btn primary sm" data-join="${esc(x.code)}">参加する</button></div>`;
+    const banner = $('#live-now');
+    banner.hidden = !L.length || Live.active || !!Viewer.code;
+    banner.innerHTML = L.length ? `<h3><span class="live-dot" aria-hidden="true"></span>いま共有されている記録</h3>${L.map(item).join('')}` : '';
+    $('#join-list').innerHTML = L.length ? L.map(item).join('') : '<p class="muted">いま共有されている記録はありません。</p>';
+  },
+  async consumePending() {
+    if (!this.pending || !S.user) return;
+    const c = this.pending; this.pending = null;
+    toast('共有された記録に参加します…');
+    await Viewer.join(c);
+  }
+};
+
+/* ---------- 資料庫（協約・規程・組合の方針・過去の回答などの管理） ---------- */
+const CAT_ORDER = ['労働協約', '学苑規程', '学苑規程（解説）', '組合規約', '組合の方針', '要求書・回答・議事録', 'その他'];
+const Lib = {
+  data: null,
+  async load() {
+    const box = $('#lib-list'); box.innerHTML = '<p class="muted">読み込んでいます…</p>';
+    try {
+      const r = await api('refsList');
+      this.data = r; S.laws = r.laws || S.laws;
+      S.refs = r.refs.filter(x => x.on !== false).map(x => ({ name: x.name, cat: x.cat, chars: x.chars, def: !!x.def }));
+      renderRefs(); this.render();
+    } catch (e) { box.innerHTML = `<p class="err">${esc(e.message)}</p>`; }
+  },
+  lawsHTML() {
+    const L = (this.data && this.data.laws) || S.laws; if (!L) return '';
+    const done = L.loaded > 0;
+    return `<div class="lib-laws"><b>国の法律（教育・労働関係）</b><p>${done ? `${L.total}本のうち<b>${L.loaded}本</b>の本文を取り込み済みです（${L.articles.toLocaleString()}条${L.at ? '・取込日 ' + new Date(L.at).toLocaleDateString('ja-JP') : ''}）。AIが挙げた条番号と引用は、この本文と照らして確認します。` : `${L.total}本の法律の索引（名称と条番号）が使えます。本文はまだ取り込まれていないため、条の引用は「未確認」と表示されます。`}</p>${L.names && L.names.length ? `<details><summary>取り込み済みの法律</summary><p class="small">${L.names.map(esc).join('、')}</p></details>` : ''}${this.data && this.data.isSecretariat ? '<p class="small muted">取り込みと更新は、スプレッドシートのメニュー「書記局 録音処」→「⑤ 国の法律の本文を取り込む（e-Gov）」で行います。</p>' : ''}</div>`;
+  },
+  render() {
+    const r = this.data; if (!r) return;
+    $('#lib-laws').innerHTML = this.lawsHTML();
+    $('#btn-lib-add').hidden = !r.canManage;
+    const cats = [...CAT_ORDER.filter(c => r.refs.some(x => x.cat === c)), ...[...new Set(r.refs.map(x => x.cat))].filter(c => !CAT_ORDER.includes(c))];
+    if (!r.refs.length) { $('#lib-list').innerHTML = '<p class="muted">登録された資料はまだありません。</p>'; return; }
+    $('#lib-list').innerHTML = cats.map(c => {
+      const rows = r.refs.filter(x => x.cat === c).map(x => {
+        const lock = x.locked, dis = lock || !r.canManage ? ' disabled' : '';
+        return `<tr class="${x.on === false ? 'off' : ''}"><td><b>${esc(x.name)}</b>${x.memo ? `<br><small class="muted">${esc(x.memo)}</small>` : ''}</td><td class="nowrap">${(x.chars / 1000).toFixed(1)}千字</td>${r.canManage ? `<td><label class="nowrap"><input type="checkbox" data-def="${esc(x.name)}"${x.def ? ' checked' : ''}${dis}> 標準で使う</label></td><td><label class="nowrap"><input type="checkbox" data-on="${esc(x.name)}"${x.on !== false ? ' checked' : ''}${dis}> 有効</label></td>` : ''}<td class="nowrap"><small class="muted">${esc(x.by || '')} ${esc(x.updated || '')}</small></td>${r.canManage ? `<td class="nowrap">${lock ? '<small class="muted">書記局のみ</small>' : `<button type="button" class="btn ghost sm" data-edit="${esc(x.name)}">編集</button> <button type="button" class="btn ghost sm" data-del="${esc(x.name)}">削除</button>`}</td>` : ''}</tr>`;
+      }).join('');
+      return `<h3 class="lib-cat">${esc(c)}</h3><div class="tbl-wrap"><table class="tbl lib-tbl">${rows}</table></div>`;
+    }).join('');
+  },
+  async setFlag(name, key, val) {
+    try { await api('setRef', { name, [key]: val }); await this.load(); }
+    catch (e) { toast(e.message, 'err'); this.load(); }
+  },
+  async remove(name) {
+    if (!(await Dlg.confirm('この資料を削除しますか？', `「${name}」を資料庫から削除します。元に戻せません。`, '削除する'))) return;
+    try { await api('deleteRef', { name }); toast('削除しました。'); await this.load(); } catch (e) { toast(e.message, 'err'); }
+  },
+  async edit(name) {
+    const r = this.data; if (!r) return;
+    let cur = { name: '', cat: '組合の方針', memo: '', text: '', def: true };
+    if (name) {
+      try { cur = await api('getRef', { name }); } catch (e) { return toast(e.message, 'err'); }
+    }
+    const cats = r.isSecretariat ? [...CAT_ORDER] : (r.freeCats && r.freeCats.length ? r.freeCats : ['組合の方針', '要求書・回答・議事録', 'その他']);
+    if (!cats.includes(cur.cat)) cats.push(cur.cat);
+    const body = `<div class="lib-form"><label class="f">資料名<input id="lf-name" maxlength="80" value="${esc(cur.name)}" placeholder="例）2026年度 賃金方針"></label><label class="f">区分<select id="lf-cat">${cats.map(c => `<option${c === cur.cat ? ' selected' : ''}>${esc(c)}</option>`).join('')}</select></label><label class="f">メモ（任意）<input id="lf-memo" maxlength="200" value="${esc(cur.memo || '')}"></label><label class="lf-def"><input type="checkbox" id="lf-def"${cur.def !== false ? ' checked' : ''}> 記録するときに、標準で参照する</label><label class="f">本文<textarea id="lf-text" rows="12" placeholder="貼り付けるか、下のボタンでファイルから読み込んでください。">${esc(cur.text || '')}</textarea></label><div class="row"><label class="btn ghost sm filebtn">ファイルから読み込む（Word・PDF・テキスト）<input type="file" id="lf-file" hidden accept=".docx,.pdf,.txt,.md,.csv,.tsv,text/plain"></label><small id="lf-count" class="muted"></small></div></div>`;
+    let saving = false;
+    const doSave = async () => {
+      if (saving) return; saving = true;
+      try {
+        const nm = $('#lf-name').value.trim(), tx = $('#lf-text').value;
+        if (!nm) return toast('資料名を入れてください。', 'err');
+        if (!tx.trim()) return toast('本文が空です。', 'err');
+        if (tx.length > 400000) return toast('資料が大きすぎます（40万字まで）。', 'err');
+        await api('saveRef', { originalName: name || undefined, name: nm, cat: $('#lf-cat').value, memo: $('#lf-memo').value, def: $('#lf-def').checked, text: tx }, { timeoutMs: 120000 });
+        $('#dlg').close(); toast('資料庫に保存しました。'); await this.load();
+      } catch (e) { toast(e.message, 'err'); } finally { saving = false; }
+    };
+    const p = Dlg.open(name ? '資料を編集' : '資料を追加', body, [{ label: 'やめる', value: 'cancel', kind: 'ghost' }, { label: '保存する', value: 'save', kind: 'primary', keep: true }], doSave);
+    const cnt = () => { $('#lf-count').textContent = `${$('#lf-text').value.length.toLocaleString()}字`; };
+    cnt(); $('#lf-text').addEventListener('input', cnt);
+    $('#lf-file').addEventListener('change', async e => {
+      const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+      try {
+        toast(`${f.name} を読み取っています…`);
+        const d = await readDoc(f), ta = $('#lf-text');
+        ta.value = ta.value.trim() ? ta.value.replace(/\s+$/, '') + '\n\n' + d.text : d.text;
+        if (!$('#lf-name').value.trim()) $('#lf-name').value = f.name.replace(/\.[^.]+$/, '');
+        cnt(); toast(`${f.name} を読み込みました（${d.text.length.toLocaleString()}字）。` + (d.note ? ' ' + d.note : ''), d.note ? 'err' : '');
+      } catch (err) { toast(err.message || String(err), 'err'); }
+    });
+    await p;
+  }
+};
+
+/* ---------- 操作の結びつけ（追加分） ---------- */
+function bind3() {
+  $$('.pick').forEach(b => b.addEventListener('change', onPick));
+  $('#ctx-in').addEventListener('change', e => { const fs = [...e.target.files]; e.target.value = ''; if (fs.length) addCtxFiles(fs); });
+  const drop = $('#ctx-drop');
+  ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { if ([...(e.dataTransfer?.types || [])].includes('Files')) { e.preventDefault(); drop.classList.add('drag'); } }));
+  ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { drop.classList.remove('drag'); }));
+  drop.addEventListener('drop', e => { const fs = [...(e.dataTransfer?.files || [])]; if (fs.length) { e.preventDefault(); addCtxFiles(fs); } });
+  $('#ctx-files').addEventListener('click', e => {
+    const pv = e.target.closest('[data-prev]'); if (pv) return previewCtx(+pv.dataset.prev);
+    const rm = e.target.closest('[data-rm]'); if (rm) { S.rec.ctxFiles.splice(+rm.dataset.rm, 1); renderCtxFiles(); markDirty(); }
+  });
+  $('#ctx-files').addEventListener('change', e => { const c = e.target.closest('input[data-i]'); if (!c) return; S.rec.ctxFiles[+c.dataset.i].on = c.checked; updateCtxTotal(); markDirty(); });
+  ['#f-policy', '#f-context'].forEach(id => $(id).addEventListener('input', () => { readMeta(); updateCtxTotal(); }));
+  ['#opt-auto', '#opt-scope', '#opt-fix'].forEach(id => $(id).addEventListener('change', savePrefs));
+  $('#btn-copy-link').addEventListener('click', () => copyText($('#sh-link').value));
+  $('#btn-copy-code').addEventListener('click', () => copyText($('#sh-code-big').textContent));
+  $('#btn-share-native').addEventListener('click', async () => {
+    try { await navigator.share({ title: '書記局 録音処', text: `${S.rec.title || '記録'}にリアルタイムで参加できます（組合員専用・個人コードでログインしてください）`, url: $('#sh-link').value }); } catch (e) { /* 取りやめ */ }
+  });
+  const joinClick = e => { const b = e.target.closest('[data-join]'); if (b) Viewer.join(b.dataset.join); };
+  $('#live-now').addEventListener('click', joinClick); $('#join-list').addEventListener('click', joinClick);
+  $('#btn-join-refresh').addEventListener('click', () => Share.refresh());
+  $('#btn-lib-add').addEventListener('click', () => Lib.edit(null));
+  $('#btn-lib-reload').addEventListener('click', () => Lib.load());
+  $('#lib-list').addEventListener('click', e => {
+    const ed = e.target.closest('[data-edit]'); if (ed) return Lib.edit(ed.dataset.edit);
+    const dl = e.target.closest('[data-del]'); if (dl) Lib.remove(dl.dataset.del);
+  });
+  $('#lib-list').addEventListener('change', e => {
+    const d = e.target.closest('[data-def]'); if (d) return Lib.setFlag(d.dataset.def, 'def', d.checked);
+    const o = e.target.closest('[data-on]'); if (o) Lib.setFlag(o.dataset.on, 'on', o.checked);
+  });
+  addEventListener('hashchange', () => { if (Share.fromHash() && S.user) Share.consumePending(); });
+}
+async function boot() {
+  Share.fromHash();
+  bind(); fillMeta(); applyPartDefaults(); updateUI();
+  if (!gasReady()) {
+    if (/\/a\/macros\//.test(CONFIG.GAS_URL)) $('#config-msg').textContent = 'GAS_URL に学校ドメイン入りのURL（/a/macros/…）が入っています。組合のアカウントでデプロイしたURL（https://script.google.com/macros/s/…/exec）に直してください。';
+    $('#v-config').hidden = false; return;
+  }
+  if (Auth.restore()) { try { await enterApp(); return; } catch (e) { Auth.token = null; sessionStorage.removeItem('rk_auth'); } }
+  showLogin('');
+}
+boot();
+</script>
+</body>
+</html>
